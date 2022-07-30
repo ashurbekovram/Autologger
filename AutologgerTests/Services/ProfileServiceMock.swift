@@ -12,20 +12,15 @@ import Combine
 final class ProfileServiceMock: ProfileService {
     var profile: CurrentValueSubject<Profile?, Never> = .init(nil)
 
-    var isFetchProfileCalled: Bool = false
-    var isUpdateProfileCalled: Bool = false
-
     func fetchProfile() -> AnyPublisher<Void, Error> {
-        isFetchProfileCalled = true
-        return Future<Void, Error> { promise in
+        Future<Void, Error> { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
 
     func updateProfile(_ profile: Profile) -> AnyPublisher<Void, Error> {
-        isUpdateProfileCalled = true
-        return Future<Void, Error> { promise in
+        Future<Void, Error> { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
