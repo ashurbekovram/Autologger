@@ -27,7 +27,7 @@ import MakesService
 import NetworkManager
 
 struct MainView<ViewModel: MainViewModelProtocol>: View {
-    @StateObject var viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
 
     var body: some View {
         ScrollView {
@@ -70,7 +70,7 @@ struct MainView<ViewModel: MainViewModelProtocol>: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    viewModel.editAutoView()
+                    viewModel.createEditAutoView()
                 } label: {
                     Image(systemName: "plus")
                 }

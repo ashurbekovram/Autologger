@@ -14,6 +14,11 @@
 		3E164C77286F38BE006772F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C76286F38BE006772F9 /* Assets.xcassets */; };
 		3E164C7A286F38BE006772F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C79286F38BE006772F9 /* Preview Assets.xcassets */; };
 		3E445B1A286F57A2001F21A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E445B19286F57A2001F21A9 /* Colors.xcassets */; };
+		3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */; };
+		3E75C2D82895DE7400BB03C4 /* MainViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D72895DE7400BB03C4 /* MainViewModelOutput.swift */; };
+		3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */; };
+		3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */; };
+		3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */; };
 		3E974327287AF9BF00612625 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E974326287AF9BF00612625 /* ProfileView.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
 		3E982BD4286F5C4C0017E6A5 /* MainAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E982BD3286F5C4C0017E6A5 /* MainAutoView.swift */; };
@@ -34,6 +39,16 @@
 		3EFF78772895CBBE009D3726 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3EFF78762895CBBE009D3726 /* Models */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3E75C2D02895CCE100BB03C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E164C67286F38BD006772F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E164C6E286F38BD006772F9;
+			remoteInfo = Autologger;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3E0A37D4287B3D9800D9AD68 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
@@ -45,6 +60,12 @@
 		3E445B19286F57A2001F21A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3E52625C2878F9530072DAB0 /* VPICService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = VPICService; sourceTree = "<group>"; };
 		3E5390932878EF4500926D1B /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
+		3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutologgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		3E75C2D72895DE7400BB03C4 /* MainViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelOutput.swift; sourceTree = "<group>"; };
+		3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
+		3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAutosServiceMock.swift; sourceTree = "<group>"; };
+		3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelOutputMock.swift; sourceTree = "<group>"; };
 		3E974326287AF9BF00612625 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3E97432A287AFA9700612625 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		3E982BD3286F5C4C0017E6A5 /* MainAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAutoView.swift; sourceTree = "<group>"; };
@@ -78,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E75C2C92895CCE100BB03C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,6 +125,7 @@
 				3EFD46FC2878E89D007619DD /* Managers */,
 				3EFD46FF2878E91D007619DD /* Services */,
 				3E164C71286F38BD006772F9 /* Autologger */,
+				3E75C2CD2895CCE100BB03C4 /* AutologgerTests */,
 				3E164C70286F38BD006772F9 /* Products */,
 				3EFD47012878EB61007619DD /* Frameworks */,
 			);
@@ -106,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				3E164C6F286F38BD006772F9 /* Autologger.app */,
+				3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +164,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3E75C2CD2895CCE100BB03C4 /* AutologgerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E75C2DF2895EB3F00BB03C4 /* MainViewModel */,
+				3E75C2E02895EB4900BB03C4 /* Services */,
+			);
+			path = AutologgerTests;
+			sourceTree = "<group>";
+		};
+		3E75C2DF2895EB3F00BB03C4 /* MainViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */,
+				3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */,
+			);
+			path = MainViewModel;
+			sourceTree = "<group>";
+		};
+		3E75C2E02895EB4900BB03C4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */,
+				3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3E97432C287AFB6100612625 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +206,7 @@
 				3EFD46F92878E28F007619DD /* Subviews */,
 				3E164C74286F38BD006772F9 /* MainView.swift */,
 				3EFD46F72878E285007619DD /* MainViewModel.swift */,
+				3E75C2D72895DE7400BB03C4 /* MainViewModelOutput.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -254,6 +312,24 @@
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3E75C2CB2895CCE100BB03C4 /* AutologgerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E75C2D42895CCE100BB03C4 /* Build configuration list for PBXNativeTarget "AutologgerTests" */;
+			buildPhases = (
+				3E75C2C82895CCE100BB03C4 /* Sources */,
+				3E75C2C92895CCE100BB03C4 /* Frameworks */,
+				3E75C2CA2895CCE100BB03C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E75C2D12895CCE100BB03C4 /* PBXTargetDependency */,
+			);
+			name = AutologgerTests;
+			productName = AutologgerTests;
+			productReference = 3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +342,10 @@
 				TargetAttributes = {
 					3E164C6E286F38BD006772F9 = {
 						CreatedOnToolsVersion = 13.4;
+					};
+					3E75C2CB2895CCE100BB03C4 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 3E164C6E286F38BD006772F9;
 					};
 				};
 			};
@@ -283,6 +363,7 @@
 			projectRoot = "";
 			targets = (
 				3E164C6E286F38BD006772F9 /* Autologger */,
+				3E75C2CB2895CCE100BB03C4 /* AutologgerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,6 +379,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E75C2CA2895CCE100BB03C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -309,6 +397,7 @@
 				3E982BD4286F5C4C0017E6A5 /* MainAutoView.swift in Sources */,
 				3EC53871287B635A0037DA15 /* Coordinator.swift in Sources */,
 				3E974327287AF9BF00612625 /* ProfileView.swift in Sources */,
+				3E75C2D82895DE7400BB03C4 /* MainViewModelOutput.swift in Sources */,
 				3E982BDC286F5FEB0017E6A5 /* EditAutoView.swift in Sources */,
 				3E0A37D5287B3D9800D9AD68 /* EditProfileView.swift in Sources */,
 				3EC5386D287B5AB40037DA15 /* MainFlowCoordinator.swift in Sources */,
@@ -324,7 +413,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E75C2C82895CCE100BB03C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */,
+				3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */,
+				3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */,
+				3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E75C2D12895CCE100BB03C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E164C6E286F38BD006772F9 /* Autologger */;
+			targetProxy = 3E75C2D02895CCE100BB03C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3E164C7B286F38BE006772F9 /* Debug */ = {
@@ -499,6 +607,44 @@
 			};
 			name = Release;
 		};
+		3E75C2D22895CCE100BB03C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FHJ5NMM3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ashurbekov.app.AutologgerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Autologger.app/Autologger";
+			};
+			name = Debug;
+		};
+		3E75C2D32895CCE100BB03C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FHJ5NMM3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ashurbekov.app.AutologgerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Autologger.app/Autologger";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +662,15 @@
 			buildConfigurations = (
 				3E164C7E286F38BE006772F9 /* Debug */,
 				3E164C7F286F38BE006772F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E75C2D42895CCE100BB03C4 /* Build configuration list for PBXNativeTarget "AutologgerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E75C2D22895CCE100BB03C4 /* Debug */,
+				3E75C2D32895CCE100BB03C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

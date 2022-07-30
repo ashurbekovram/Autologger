@@ -13,8 +13,6 @@ import SwiftUI
 import UserAutosService
 
 protocol MainViewModelProtocol: ObservableObject {
-    var editAutoView: (() -> AnyView) { get }
-
     var errorMessage: String? { get }
     var isProfileLoading: Bool { get }
     var isAutosLoading: Bool { get }
@@ -22,6 +20,7 @@ protocol MainViewModelProtocol: ObservableObject {
     var autos: [Auto] { get }
 
     func onAppear()
+    func createEditAutoView() -> AnyView
 }
 
 final class MainViewModel: MainViewModelProtocol {
@@ -33,26 +32,40 @@ final class MainViewModel: MainViewModelProtocol {
 
     private var isFirstOpen: Bool = true
 
-    var editAutoView: (() -> AnyView)
-
     private let profileService: ProfileService
     private let userAutosService: UserAutosService
+    private unowned var output: MainViewModelOutput
+
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
         profileService: ProfileService,
         userAutosService: UserAutosService,
-        editAutoView: @escaping (() -> AnyView)
+        output: MainViewModelOutput
     ) {
         self.profileService = profileService
         self.userAutosService = userAutosService
-        self.editAutoView = editAutoView
+        self.output = output
         setupBindings()
         print("\(type(of: self)) init")
     }
 
     deinit {
         print("\(type(of: self)) deinit")
+    }
+
+    func onAppear() {
+        guard isFirstOpen else {
+            return
+        }
+        isFirstOpen = false
+
+        loadProfile()
+        loadUserAutos()
+    }
+
+    func createEditAutoView() -> AnyView {
+        return output.createEditAutoView()
     }
 
     private func setupBindings() {
@@ -65,16 +78,6 @@ final class MainViewModel: MainViewModelProtocol {
             .removeDuplicates()
             .print()
             .assign(to: &$autos)
-    }
-
-    func onAppear() {
-        guard isFirstOpen else {
-            return
-        }
-        isFirstOpen = false
-
-        loadProfile()
-        loadUserAutos()
     }
 
     private func loadProfile() {

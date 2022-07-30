@@ -15,16 +15,17 @@ final class MainFlowCoordinator: Coordinator {
 
 extension MainFlowCoordinator {
     private func mainView() -> AnyView {
-        let editAutoView = editAutoView()
         let viewModel = MainViewModel(
             profileService: AppAssembler.profileService,
             userAutosService: AppAssembler.userAutosService,
-            editAutoView: { editAutoView }
+            output: self
         )
         return AnyView(MainView(viewModel: viewModel))
     }
+}
 
-    private func editAutoView() -> AnyView {
+extension MainFlowCoordinator: MainViewModelOutput {
+    func createEditAutoView() -> AnyView {
         let viewModel = EditAutoViewModel(
             makesService: AppAssembler.makesService,
             userAutosService: AppAssembler.userAutosService
