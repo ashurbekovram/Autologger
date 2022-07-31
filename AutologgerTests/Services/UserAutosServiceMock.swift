@@ -20,7 +20,8 @@ final class UserAutosServiceMock: UserAutosService {
     }
 
     func addNewAuto(_ auto: Auto) -> AnyPublisher<Void, Error> {
-        Future<Void, Error> { promise in
+        userAutos.value.append(auto)
+        return Future<Void, Error> { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
