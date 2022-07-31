@@ -71,12 +71,10 @@ final class MainViewModel: MainViewModelProtocol {
     private func setupBindings() {
         profileService.profile
             .removeDuplicates()
-            .print()
             .assign(to: &$profile)
 
         userAutosService.userAutos
             .removeDuplicates()
-            .print()
             .assign(to: &$autos)
     }
 
