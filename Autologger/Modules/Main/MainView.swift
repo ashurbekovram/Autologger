@@ -70,7 +70,7 @@ struct MainView<ViewModel: MainViewModelProtocol>: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    viewModel.createEditAutoView()
+                    LazyView(viewModel.createEditAutoView())
                 } label: {
                     Image(systemName: "plus")
                 }
