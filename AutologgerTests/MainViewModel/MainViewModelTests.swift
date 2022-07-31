@@ -53,8 +53,8 @@ final class MainViewModelTests: XCTestCase {
             .store(in: &cancellableSet)
 
         let stubAutos = [
-            Auto(brand: "BMW", model: "330i", year: 2005),
-            Auto(brand: "Porsche", model: "Panamera", year: 2018)
+            Auto(brand: "BMW", model: "330i", year: 2005, vin: "AAAAAAAAAA"),
+            Auto(brand: "Porsche", model: "Panamera", year: 2018, vin: "AAAAAAAAAA")
         ]
         let expectationAutos = XCTestExpectation(description: "Autos is loaded")
         mainViewModel.$autos

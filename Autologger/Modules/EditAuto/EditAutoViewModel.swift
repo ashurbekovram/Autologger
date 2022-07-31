@@ -20,6 +20,7 @@ protocol EditAutoViewModelProtocol: ObservableObject {
     var selectedMake: Make? { get set }
     var selectedYear: Int { get set }
     var model: String { get set }
+    var vin: String { get set }
 
     func fetchMakes()
     func save()
@@ -34,6 +35,7 @@ final class EditAutoViewModel: EditAutoViewModelProtocol {
     @Published var selectedMake: Make?
     @Published var selectedYear: Int = 2000
     @Published var model: String = ""
+    @Published var vin: String = ""
 
     private let makesService: MakesService
     private let userAutosService: UserAutosService
@@ -78,7 +80,8 @@ final class EditAutoViewModel: EditAutoViewModelProtocol {
         let auto = Auto(
             brand: selectedMake.name,
             model: model,
-            year: selectedYear
+            year: selectedYear,
+            vin: vin
         )
         userAutosService.addNewAuto(auto)
             .sink { _ in

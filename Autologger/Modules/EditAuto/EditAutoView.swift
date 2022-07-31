@@ -43,6 +43,7 @@ struct EditAutoView<ViewModel: EditAutoViewModelProtocol>: View {
                             }
                             .pickerStyle(.wheel)
                             TextField("Enter Model", text: $viewModel.model)
+                            TextField("Enter VIN", text: $viewModel.vin)
                         }
                         Section {
                             Button("Save") {

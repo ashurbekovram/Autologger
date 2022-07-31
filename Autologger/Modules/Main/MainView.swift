@@ -93,7 +93,7 @@ struct MainView<ViewModel: MainViewModelProtocol>: View {
 
     private var autoPlaceholder: some View {
         MainAutoView(
-            auto: Auto(brand: "Mock brand", model: "Mock automodel", year: 2000)
+            auto: Auto(brand: "Mock brand", model: "Mock automodel", year: 2000, vin: "AAAAAAAAAAAA")
         )
         .redacted(reason: .placeholder)
     }
