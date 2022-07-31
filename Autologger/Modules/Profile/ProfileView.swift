@@ -11,7 +11,7 @@ import UIComponents
 import ProfileService
 
 struct ProfileView<ViewModel: ProfileViewModelProtocol>: View  {
-    @StateObject var viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
 
     var body: some View {
         ScrollView {

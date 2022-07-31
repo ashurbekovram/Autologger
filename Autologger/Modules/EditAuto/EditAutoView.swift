@@ -12,7 +12,7 @@ import Models
 import NetworkManager
 
 struct EditAutoView<ViewModel: EditAutoViewModelProtocol>: View {
-    @StateObject var viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
 
     var body: some View {
         VStack {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditProfileView<ViewModel: EditProfileViewModelProtocol>: View {
 //    @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
 
     var body: some View {
         Form {
