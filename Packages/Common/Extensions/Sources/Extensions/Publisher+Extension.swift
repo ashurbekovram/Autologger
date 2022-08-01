@@ -1,13 +1,13 @@
 //
 //  PublisherExtension.swift
-//  Autologger
+//
 //
 //  Created by Ramazan Ashurbekov on 18.07.2022.
 //
 
 import Combine
 
-extension Publisher {
+public extension Publisher {
     func weakSink<T: AnyObject>(
         on object: T,
         receiveCompletion onCompletion: ((T, Subscribers.Completion<Failure>) -> Void)? = nil,

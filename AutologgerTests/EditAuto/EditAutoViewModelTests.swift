@@ -5,6 +5,7 @@
 //  Created by Ramazan Ashurbekov on 31.07.2022.
 //
 
+import TestExtensions
 import Combine
 import XCTest
 

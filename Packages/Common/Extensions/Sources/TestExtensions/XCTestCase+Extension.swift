@@ -1,14 +1,14 @@
 //
 //  XCTestCase+Extension.swift
-//  AutologgerTests
+//  
 //
-//  Created by Ramazan Ashurbekov on 31.07.2022.
+//  Created by Ramazan Ashurbekov on 01.08.2022.
 //
 
 import Combine
 import XCTest
 
-extension XCTestCase {
+public extension XCTestCase {
     func awaitPublisher<T: Publisher>(
         _ publisher: T,
         timeout: TimeInterval = 2,

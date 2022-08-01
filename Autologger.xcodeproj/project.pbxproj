@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E099F1B28985FA60014A07C /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E099F1A28985FA60014A07C /* Extensions */; };
+		3E099F1D289861D00014A07C /* TestExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E099F1C289861D00014A07C /* TestExtensions */; };
 		3E0A37D5287B3D9800D9AD68 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A37D4287B3D9800D9AD68 /* EditProfileView.swift */; };
 		3E0A37D7287B3DA200D9AD68 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */; };
 		3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E164C72286F38BD006772F9 /* AutologgerApp.swift */; };
@@ -24,7 +26,6 @@
 		3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */; };
 		3E75C2E22895F8E800BB03C4 /* EditAutoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */; };
 		3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */; };
-		3E75C2E728967D8900BB03C4 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E628967D8900BB03C4 /* XCTestCase+Extension.swift */; };
 		3E974327287AF9BF00612625 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E974326287AF9BF00612625 /* ProfileView.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
 		3E977A7628985D0F0084E398 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7528985D0F0084E398 /* Models */; };
@@ -37,7 +38,6 @@
 		3EC5386F287B61C00037DA15 /* ProfileFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386E287B61C00037DA15 /* ProfileFlowCoordinator.swift */; };
 		3EC53871287B635A0037DA15 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC53870287B635A0037DA15 /* Coordinator.swift */; };
 		3EF37ADC287B267A00399AF4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */; };
-		3EF848A82885E10E00E9C5DF /* PublisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF848A72885E10E00E9C5DF /* PublisherExtension.swift */; };
 		3EFD46F82878E285007619DD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD46F72878E285007619DD /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E099F1928985F290014A07C /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Extensions; path = Packages/Common/Extensions; sourceTree = "<group>"; };
 		3E0A37D4287B3D9800D9AD68 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		3E164C6F286F38BD006772F9 /* Autologger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autologger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +71,6 @@
 		3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelOutputMock.swift; sourceTree = "<group>"; };
 		3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoViewModelTests.swift; sourceTree = "<group>"; };
 		3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakesServiceMock.swift; sourceTree = "<group>"; };
-		3E75C2E628967D8900BB03C4 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		3E974326287AF9BF00612625 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3E97432A287AFA9700612625 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		3E977A6F28985CAC0084E398 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = Packages/Common/Models; sourceTree = "<group>"; };
@@ -85,7 +85,6 @@
 		3EC5386E287B61C00037DA15 /* ProfileFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowCoordinator.swift; sourceTree = "<group>"; };
 		3EC53870287B635A0037DA15 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		3EF848A72885E10E00E9C5DF /* PublisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtension.swift; sourceTree = "<group>"; };
 		3EFD46F72878E285007619DD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E099F1B28985FA60014A07C /* Extensions in Frameworks */,
 				3E369AAC28985D8F009DA1C5 /* ProfileService in Frameworks */,
 				3E977A7828985D140084E398 /* UIComponents in Frameworks */,
 				3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */,
@@ -106,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E099F1D289861D00014A07C /* TestExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +148,6 @@
 				3E164C72286F38BD006772F9 /* AutologgerApp.swift */,
 				3E97432A287AFA9700612625 /* AppTabView.swift */,
 				3EC5386A287B51560037DA15 /* AppAssembler.swift */,
-				3EF848A72885E10E00E9C5DF /* PublisherExtension.swift */,
 				3EA0C256287B8316004EFE40 /* Coordinators */,
 				3EA0C257287B831F004EFE40 /* Modules */,
 				3E445B19286F57A2001F21A9 /* Colors.xcassets */,
@@ -168,7 +168,6 @@
 		3E75C2CD2895CCE100BB03C4 /* AutologgerTests */ = {
 			isa = PBXGroup;
 			children = (
-				3E75C2E828967D8F00BB03C4 /* Extensions */,
 				3E75C2E32895F8EC00BB03C4 /* EditAuto */,
 				3E75C2DF2895EB3F00BB03C4 /* MainViewModel */,
 				3E75C2E02895EB4900BB03C4 /* Services */,
@@ -203,14 +202,6 @@
 			path = EditAuto;
 			sourceTree = "<group>";
 		};
-		3E75C2E828967D8F00BB03C4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3E75C2E628967D8900BB03C4 /* XCTestCase+Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		3E97432C287AFB6100612625 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +214,7 @@
 		3E977A6E28985CAC0084E398 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				3E099F1928985F290014A07C /* Extensions */,
 				3E977A6F28985CAC0084E398 /* Models */,
 				3E977A7028985CB70084E398 /* UIComponents */,
 				3E977A7228985CD90084E398 /* ProfileService */,
@@ -311,6 +303,7 @@
 				3E369AA928985D8B009DA1C5 /* MakesService */,
 				3E369AAB28985D8F009DA1C5 /* ProfileService */,
 				3E369AAD28985D92009DA1C5 /* UserAutosService */,
+				3E099F1A28985FA60014A07C /* Extensions */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -330,6 +323,9 @@
 				3E75C2D12895CCE100BB03C4 /* PBXTargetDependency */,
 			);
 			name = AutologgerTests;
+			packageProductDependencies = (
+				3E099F1C289861D00014A07C /* TestExtensions */,
+			);
 			productName = AutologgerTests;
 			productReference = 3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -412,7 +408,6 @@
 				3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */,
 				3EFD46F82878E285007619DD /* MainViewModel.swift in Sources */,
 				3EC5386F287B61C00037DA15 /* ProfileFlowCoordinator.swift in Sources */,
-				3EF848A82885E10E00E9C5DF /* PublisherExtension.swift in Sources */,
 				3E97432B287AFA9700612625 /* AppTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,7 +421,6 @@
 				3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */,
 				3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */,
 				3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */,
-				3E75C2E728967D8900BB03C4 /* XCTestCase+Extension.swift in Sources */,
 				3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +679,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3E099F1A28985FA60014A07C /* Extensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Extensions;
+		};
+		3E099F1C289861D00014A07C /* TestExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TestExtensions;
+		};
 		3E369AA928985D8B009DA1C5 /* MakesService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MakesService;
