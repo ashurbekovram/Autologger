@@ -13,6 +13,9 @@
 		3E164C75286F38BD006772F9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E164C74286F38BD006772F9 /* MainView.swift */; };
 		3E164C77286F38BE006772F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C76286F38BE006772F9 /* Assets.xcassets */; };
 		3E164C7A286F38BE006772F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C79286F38BE006772F9 /* Preview Assets.xcassets */; };
+		3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AA928985D8B009DA1C5 /* MakesService */; };
+		3E369AAC28985D8F009DA1C5 /* ProfileService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AAB28985D8F009DA1C5 /* ProfileService */; };
+		3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AAD28985D92009DA1C5 /* UserAutosService */; };
 		3E445B1A286F57A2001F21A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E445B19286F57A2001F21A9 /* Colors.xcassets */; };
 		3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */; };
 		3E75C2D82895DE7400BB03C4 /* MainViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D72895DE7400BB03C4 /* MainViewModelOutput.swift */; };
@@ -24,6 +27,8 @@
 		3E75C2E728967D8900BB03C4 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E628967D8900BB03C4 /* XCTestCase+Extension.swift */; };
 		3E974327287AF9BF00612625 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E974326287AF9BF00612625 /* ProfileView.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
+		3E977A7628985D0F0084E398 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7528985D0F0084E398 /* Models */; };
+		3E977A7828985D140084E398 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7728985D140084E398 /* UIComponents */; };
 		3E982BD4286F5C4C0017E6A5 /* MainAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E982BD3286F5C4C0017E6A5 /* MainAutoView.swift */; };
 		3E982BDC286F5FEB0017E6A5 /* EditAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E982BDB286F5FEB0017E6A5 /* EditAutoView.swift */; };
 		3E982BE0286F687F0017E6A5 /* EditAutoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E982BDF286F687F0017E6A5 /* EditAutoViewModel.swift */; };
@@ -54,6 +59,8 @@
 		3E164C74286F38BD006772F9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3E164C76286F38BE006772F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E164C79286F38BE006772F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E369AA728985D6E009DA1C5 /* MakesService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MakesService; path = Packages/Services/MakesService; sourceTree = "<group>"; };
+		3E369AA828985D81009DA1C5 /* NetworkManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkManager; path = Packages/Managers/NetworkManager; sourceTree = "<group>"; };
 		3E445B19286F57A2001F21A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutologgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
@@ -66,6 +73,10 @@
 		3E75C2E628967D8900BB03C4 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		3E974326287AF9BF00612625 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3E97432A287AFA9700612625 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		3E977A6F28985CAC0084E398 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = Packages/Common/Models; sourceTree = "<group>"; };
+		3E977A7028985CB70084E398 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIComponents; path = Packages/Common/UIComponents; sourceTree = "<group>"; };
+		3E977A7228985CD90084E398 /* ProfileService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileService; path = Packages/Services/ProfileService; sourceTree = "<group>"; };
+		3E977A7328985CE20084E398 /* UserAutosService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UserAutosService; path = Packages/Services/UserAutosService; sourceTree = "<group>"; };
 		3E982BD3286F5C4C0017E6A5 /* MainAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAutoView.swift; sourceTree = "<group>"; };
 		3E982BDB286F5FEB0017E6A5 /* EditAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoView.swift; sourceTree = "<group>"; };
 		3E982BDF286F687F0017E6A5 /* EditAutoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +94,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E369AAC28985D8F009DA1C5 /* ProfileService in Frameworks */,
+				3E977A7828985D140084E398 /* UIComponents in Frameworks */,
+				3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */,
+				3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */,
+				3E977A7628985D0F0084E398 /* Models in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +124,7 @@
 		3E164C66286F38BD006772F9 = {
 			isa = PBXGroup;
 			children = (
+				3E977A6E28985CAC0084E398 /* Packages */,
 				3E164C71286F38BD006772F9 /* Autologger */,
 				3E75C2CD2895CCE100BB03C4 /* AutologgerTests */,
 				3E164C70286F38BD006772F9 /* Products */,
@@ -203,6 +220,19 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		3E977A6E28985CAC0084E398 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3E977A6F28985CAC0084E398 /* Models */,
+				3E977A7028985CB70084E398 /* UIComponents */,
+				3E977A7228985CD90084E398 /* ProfileService */,
+				3E977A7328985CE20084E398 /* UserAutosService */,
+				3E369AA728985D6E009DA1C5 /* MakesService */,
+				3E369AA828985D81009DA1C5 /* NetworkManager */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		3E982BD2286F5C420017E6A5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +306,11 @@
 			);
 			name = Autologger;
 			packageProductDependencies = (
+				3E977A7528985D0F0084E398 /* Models */,
+				3E977A7728985D140084E398 /* UIComponents */,
+				3E369AA928985D8B009DA1C5 /* MakesService */,
+				3E369AAB28985D8F009DA1C5 /* ProfileService */,
+				3E369AAD28985D92009DA1C5 /* UserAutosService */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -648,6 +683,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E369AA928985D8B009DA1C5 /* MakesService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MakesService;
+		};
+		3E369AAB28985D8F009DA1C5 /* ProfileService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProfileService;
+		};
+		3E369AAD28985D92009DA1C5 /* UserAutosService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UserAutosService;
+		};
+		3E977A7528985D0F0084E398 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		3E977A7728985D140084E398 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E164C67286F38BD006772F9 /* Project object */;
 }
