@@ -63,3 +63,28 @@ struct EditAutoView<ViewModel: EditAutoViewModelProtocol>: View {
         }
     }
 }
+
+
+final class EditAutoViewModelMock: EditAutoViewModelProtocol {
+    @Published var isLoading: Bool = false
+    @Published var error: Error? = nil
+    @Published var makes: [Make] = []
+    @Published var years: [Int] = [2005, 2006, 2007, 2008]
+
+    @Published var selectedMake: Make? = nil
+    @Published var selectedYear: Int = 2005
+    @Published var model: String = ""
+    @Published var vin: String = ""
+
+    func fetchMakes() {
+    }
+
+    func save() {
+    }
+}
+
+struct EditAutoView_Previews: PreviewProvider {
+    static var previews: some View {
+        EditAutoView(viewModel: EditAutoViewModelMock())
+    }
+}
