@@ -1,11 +1,27 @@
+import Combine
+import Models
+import TestExtensions
 import XCTest
+
 @testable import ProfileService
 
 final class ProfileServiceTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(ProfileService().text, "Hello, World!")
+    private var profileService: ProfileService!
+
+    override func setUpWithError() throws {
+        profileService = ProfileServiceLocal()
+    }
+
+    override func tearDownWithError() throws {
+        profileService = nil
+    }
+
+    func testUpdateProfile() throws {
+        let stubProfile = Profile(name: "Name", secondName: "SecondName", imageURL: nil)
+
+        let _ = profileService.updateProfile(stubProfile)
+        let profile = try awaitPublisher(profileService.profile)
+
+        XCTAssertEqual(stubProfile, profile)
     }
 }
