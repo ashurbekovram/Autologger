@@ -37,7 +37,6 @@
 		3EF37ADC287B267A00399AF4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */; };
 		3EF848A82885E10E00E9C5DF /* PublisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF848A72885E10E00E9C5DF /* PublisherExtension.swift */; };
 		3EFD46F82878E285007619DD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD46F72878E285007619DD /* MainViewModel.swift */; };
-		3EFD47032878EB61007619DD /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 3EFD47022878EB61007619DD /* NetworkManager */; };
 		3EFD47052878EB66007619DD /* MakesService in Frameworks */ = {isa = PBXBuildFile; productRef = 3EFD47042878EB66007619DD /* MakesService */; };
 		3EFF78772895CBBE009D3726 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3EFF78762895CBBE009D3726 /* Models */; };
 /* End PBXBuildFile section */
@@ -100,7 +99,6 @@
 				3EA422EE2881E69D006D2458 /* UserAutosService in Frameworks */,
 				3EADF125287B0C4D0071DF52 /* ProfileService in Frameworks */,
 				3EFD47052878EB66007619DD /* MakesService in Frameworks */,
-				3EFD47032878EB61007619DD /* NetworkManager in Frameworks */,
 				3E9FA0F4287B258F00EF6583 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +324,6 @@
 			);
 			name = Autologger;
 			packageProductDependencies = (
-				3EFD47022878EB61007619DD /* NetworkManager */,
 				3EFD47042878EB66007619DD /* MakesService */,
 				3EADF124287B0C4D0071DF52 /* ProfileService */,
 				3E9FA0F3287B258F00EF6583 /* UIComponents */,
@@ -717,10 +714,6 @@
 		3EADF124287B0C4D0071DF52 /* ProfileService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProfileService;
-		};
-		3EFD47022878EB61007619DD /* NetworkManager */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = NetworkManager;
 		};
 		3EFD47042878EB66007619DD /* MakesService */ = {
 			isa = XCSwiftPackageProductDependency;
