@@ -17,14 +17,14 @@ let package = Package(
     dependencies: [
         .package(name: "Models", path: "../Common/Models"),
         .package(name: "NetworkManager", path: "../Managers/NetworkManager"),
-        .package(name: "Extensions", path: "../Common/Extensions")
+        .package(name: "Extensions", path: "../Common/Extensions"),
     ],
     targets: [
         .target(
             name: "ProfileService",
             dependencies: [
                 .product(name: "Models", package: "Models"),
-                .product(name: "NetworkManager", package: "NetworkManager")
+                .product(name: "NetworkManagerInterface", package: "NetworkManager"),
             ]
         ),
         .testTarget(

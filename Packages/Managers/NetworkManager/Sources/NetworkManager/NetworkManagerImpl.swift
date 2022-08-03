@@ -7,10 +7,7 @@
 
 import Combine
 import Foundation
-
-public protocol NetworkManager {
-    func send<T: HTTPRequest>(request: T) -> AnyPublisher<T.Response, Error>
-}
+import NetworkManagerInterface
 
 public final class NetworkManagerImpl: NetworkManager {
     public init() {}

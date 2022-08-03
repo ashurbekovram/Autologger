@@ -6,7 +6,7 @@
 //
 
 import Models
-import NetworkManager
+import NetworkManagerInterface
 
 struct MakesRequest: HTTPRequest {
     typealias Response = [Make]

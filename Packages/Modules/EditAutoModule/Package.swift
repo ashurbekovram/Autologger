@@ -18,7 +18,7 @@ let package = Package(
         .package(name: "Models", path: "../Common/Models"),
         .package(name: "MakesService", path: "../Services/MakesService"),
         .package(name: "UIComponents", path: "../Common/UIComponents"),
-        .package(name: "UserAutosService", path: "../Services/UserAutosService")
+        .package(name: "UserAutosService", path: "../Services/UserAutosService"),
     ],
     targets: [
         .target(
@@ -27,7 +27,7 @@ let package = Package(
                 .product(name: "Models", package: "Models"),
                 .product(name: "MakesService", package: "MakesService"),
                 .product(name: "UserAutosService", package: "UserAutosService"),
-                .product(name: "UIComponents", package: "UIComponents")
+                .product(name: "UIComponents", package: "UIComponents"),
             ]
         ),
         .testTarget(

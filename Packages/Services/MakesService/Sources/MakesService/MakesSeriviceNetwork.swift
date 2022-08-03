@@ -7,7 +7,7 @@
 
 import Combine
 import Models
-import NetworkManager
+import NetworkManagerInterface
 
 public final class MakesSeriviceNetwork: MakesService{
     private let networkManager: NetworkManager

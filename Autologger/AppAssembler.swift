@@ -8,6 +8,7 @@
 import Foundation
 import MakesService
 import NetworkManager
+import NetworkManagerInterface
 import ProfileService
 import SwiftUI
 import UserAutosService

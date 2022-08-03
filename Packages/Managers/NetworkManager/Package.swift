@@ -13,11 +13,19 @@ let package = Package(
             name: "NetworkManager",
             targets: ["NetworkManager"]
         ),
+        .library(
+            name: "NetworkManagerInterface",
+            targets: ["NetworkManagerInterface"]
+        )
     ],
     dependencies: [],
     targets: [
         .target(
             name: "NetworkManager",
+            dependencies: ["NetworkManagerInterface"]
+        ),
+        .target(
+            name: "NetworkManagerInterface",
             dependencies: []
         ),
         .testTarget(

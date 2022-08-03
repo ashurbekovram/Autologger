@@ -7,14 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E099F1B28985FA60014A07C /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E099F1A28985FA60014A07C /* Extensions */; };
 		3E099F1D289861D00014A07C /* TestExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E099F1C289861D00014A07C /* TestExtensions */; };
 		3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E164C72286F38BD006772F9 /* AutologgerApp.swift */; };
 		3E164C77286F38BE006772F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C76286F38BE006772F9 /* Assets.xcassets */; };
 		3E164C7A286F38BE006772F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C79286F38BE006772F9 /* Preview Assets.xcassets */; };
-		3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AA928985D8B009DA1C5 /* MakesService */; };
-		3E369AAC28985D8F009DA1C5 /* ProfileService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AAB28985D8F009DA1C5 /* ProfileService */; };
-		3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AAD28985D92009DA1C5 /* UserAutosService */; };
 		3E445B1A286F57A2001F21A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E445B19286F57A2001F21A9 /* Colors.xcassets */; };
 		3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */; };
 		3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */; };
@@ -22,13 +18,19 @@
 		3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */; };
 		3E75C2E22895F8E800BB03C4 /* EditAutoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */; };
 		3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */; };
-		3E79D148289A74C400EEE971 /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D147289A74C400EEE971 /* MainModule */; };
-		3E79D14C289A75B100EEE971 /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D14B289A75B100EEE971 /* EditAutoModule */; };
-		3E84DA9F289A7D4300F75932 /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E84DA9E289A7D4300F75932 /* ProfileModule */; };
+		3E7A6F2C289A834200F7C80C /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F2B289A834200F7C80C /* Extensions */; };
+		3E7A6F2E289A834800F7C80C /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F2D289A834800F7C80C /* Models */; };
+		3E7A6F30289A834C00F7C80C /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F2F289A834C00F7C80C /* UIComponents */; };
+		3E7A6F32289A835200F7C80C /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F31289A835200F7C80C /* NetworkManager */; };
+		3E7A6F34289A835500F7C80C /* NetworkManagerInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F33289A835500F7C80C /* NetworkManagerInterface */; };
+		3E7A6F36289A835B00F7C80C /* ProfileService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F35289A835B00F7C80C /* ProfileService */; };
+		3E7A6F38289A836500F7C80C /* MakesService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F37289A836500F7C80C /* MakesService */; };
+		3E7A6F3A289A836B00F7C80C /* UserAutosService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F39289A836B00F7C80C /* UserAutosService */; };
+		3E7A6F3C289A837900F7C80C /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3B289A837900F7C80C /* MainModule */; };
+		3E7A6F3E289A837D00F7C80C /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3D289A837D00F7C80C /* ProfileModule */; };
+		3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3F289A838000F7C80C /* EditAutoModule */; };
 		3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9228995AD30080597A /* AppViewFactory.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
-		3E977A7628985D0F0084E398 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7528985D0F0084E398 /* Models */; };
-		3E977A7828985D140084E398 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7728985D140084E398 /* UIComponents */; };
 		3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386A287B51560037DA15 /* AppAssembler.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,15 +77,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E099F1B28985FA60014A07C /* Extensions in Frameworks */,
-				3E369AAC28985D8F009DA1C5 /* ProfileService in Frameworks */,
-				3E79D148289A74C400EEE971 /* MainModule in Frameworks */,
-				3E79D14C289A75B100EEE971 /* EditAutoModule in Frameworks */,
-				3E977A7828985D140084E398 /* UIComponents in Frameworks */,
-				3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */,
-				3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */,
-				3E84DA9F289A7D4300F75932 /* ProfileModule in Frameworks */,
-				3E977A7628985D0F0084E398 /* Models in Frameworks */,
+				3E7A6F30289A834C00F7C80C /* UIComponents in Frameworks */,
+				3E7A6F38289A836500F7C80C /* MakesService in Frameworks */,
+				3E7A6F2E289A834800F7C80C /* Models in Frameworks */,
+				3E7A6F34289A835500F7C80C /* NetworkManagerInterface in Frameworks */,
+				3E7A6F3A289A836B00F7C80C /* UserAutosService in Frameworks */,
+				3E7A6F2C289A834200F7C80C /* Extensions in Frameworks */,
+				3E7A6F36289A835B00F7C80C /* ProfileService in Frameworks */,
+				3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */,
+				3E7A6F3C289A837900F7C80C /* MainModule in Frameworks */,
+				3E7A6F3E289A837D00F7C80C /* ProfileModule in Frameworks */,
+				3E7A6F32289A835200F7C80C /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,15 +246,17 @@
 			);
 			name = Autologger;
 			packageProductDependencies = (
-				3E977A7528985D0F0084E398 /* Models */,
-				3E977A7728985D140084E398 /* UIComponents */,
-				3E369AA928985D8B009DA1C5 /* MakesService */,
-				3E369AAB28985D8F009DA1C5 /* ProfileService */,
-				3E369AAD28985D92009DA1C5 /* UserAutosService */,
-				3E099F1A28985FA60014A07C /* Extensions */,
-				3E79D147289A74C400EEE971 /* MainModule */,
-				3E79D14B289A75B100EEE971 /* EditAutoModule */,
-				3E84DA9E289A7D4300F75932 /* ProfileModule */,
+				3E7A6F2B289A834200F7C80C /* Extensions */,
+				3E7A6F2D289A834800F7C80C /* Models */,
+				3E7A6F2F289A834C00F7C80C /* UIComponents */,
+				3E7A6F31289A835200F7C80C /* NetworkManager */,
+				3E7A6F33289A835500F7C80C /* NetworkManagerInterface */,
+				3E7A6F35289A835B00F7C80C /* ProfileService */,
+				3E7A6F37289A836500F7C80C /* MakesService */,
+				3E7A6F39289A836B00F7C80C /* UserAutosService */,
+				3E7A6F3B289A837900F7C80C /* MainModule */,
+				3E7A6F3D289A837D00F7C80C /* ProfileModule */,
+				3E7A6F3F289A838000F7C80C /* EditAutoModule */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -614,45 +620,53 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3E099F1A28985FA60014A07C /* Extensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Extensions;
-		};
 		3E099F1C289861D00014A07C /* TestExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TestExtensions;
 		};
-		3E369AA928985D8B009DA1C5 /* MakesService */ = {
+		3E7A6F2B289A834200F7C80C /* Extensions */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MakesService;
+			productName = Extensions;
 		};
-		3E369AAB28985D8F009DA1C5 /* ProfileService */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ProfileService;
-		};
-		3E369AAD28985D92009DA1C5 /* UserAutosService */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UserAutosService;
-		};
-		3E79D147289A74C400EEE971 /* MainModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MainModule;
-		};
-		3E79D14B289A75B100EEE971 /* EditAutoModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = EditAutoModule;
-		};
-		3E84DA9E289A7D4300F75932 /* ProfileModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ProfileModule;
-		};
-		3E977A7528985D0F0084E398 /* Models */ = {
+		3E7A6F2D289A834800F7C80C /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
 		};
-		3E977A7728985D140084E398 /* UIComponents */ = {
+		3E7A6F2F289A834C00F7C80C /* UIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIComponents;
+		};
+		3E7A6F31289A835200F7C80C /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkManager;
+		};
+		3E7A6F33289A835500F7C80C /* NetworkManagerInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkManagerInterface;
+		};
+		3E7A6F35289A835B00F7C80C /* ProfileService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProfileService;
+		};
+		3E7A6F37289A836500F7C80C /* MakesService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MakesService;
+		};
+		3E7A6F39289A836B00F7C80C /* UserAutosService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UserAutosService;
+		};
+		3E7A6F3B289A837900F7C80C /* MainModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MainModule;
+		};
+		3E7A6F3D289A837D00F7C80C /* ProfileModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProfileModule;
+		};
+		3E7A6F3F289A838000F7C80C /* EditAutoModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EditAutoModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

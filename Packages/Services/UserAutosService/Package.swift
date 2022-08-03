@@ -23,7 +23,7 @@ let package = Package(
             name: "UserAutosService",
             dependencies: [
                 .product(name: "Models", package: "Models"),
-                .product(name: "NetworkManager", package: "NetworkManager")
+                .product(name: "NetworkManagerInterface", package: "NetworkManager"),
             ]
         ),
         .testTarget(

@@ -16,14 +16,14 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Models", path: "../Common/Models"),
-        .package(name: "NetworkManager", path: "../Managers/NetworkManager")
+        .package(name: "NetworkManager", path: "../Managers/NetworkManager"),
     ],
     targets: [
         .target(
             name: "MakesService",
             dependencies: [
                 .product(name: "Models", package: "Models"),
-                .product(name: "NetworkManager", package: "NetworkManager")
+                .product(name: "NetworkManagerInterface", package: "NetworkManager"),
             ]
         ),
         .testTarget(
