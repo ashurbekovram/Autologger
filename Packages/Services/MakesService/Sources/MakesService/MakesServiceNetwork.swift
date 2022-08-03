@@ -1,5 +1,5 @@
 //
-//  MakesSeriviceNetwork.swift
+//  MakesServiceNetwork.swift
 //  
 //
 //  Created by Ramazan Ashurbekov on 09.07.2022.
@@ -9,7 +9,7 @@ import Combine
 import Models
 import NetworkManagerInterface
 
-public final class MakesSeriviceNetwork: MakesService{
+public final class MakesServiceNetwork: MakesService{
     private let networkManager: NetworkManager
 
     public init(networkManager: NetworkManager) {

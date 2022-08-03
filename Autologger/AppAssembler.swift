@@ -14,7 +14,7 @@ import SwiftUI
 import UserAutosService
 
 final class AppAssembler {
-    public static var makesService: MakesService = MakesSeriviceNetwork(networkManager: networkManager)
+    public static var makesService: MakesService = MakesServiceNetwork(networkManager: networkManager)
     public static var networkManager: NetworkManager = NetworkManagerImpl()
     public static var profileService: ProfileService = ProfileServiceLocal()
     public static var userAutosService: UserAutosService = UserAutosServiceLocal()

@@ -1,5 +1,5 @@
 //
-//  MakesSerivice.swift
+//  MakesService.swift
 //  Autologger
 //
 //  Created by Ramazan Ashurbekov on 02.07.2022.
