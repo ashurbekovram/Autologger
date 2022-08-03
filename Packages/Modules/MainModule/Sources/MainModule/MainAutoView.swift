@@ -31,3 +31,16 @@ struct MainAutoView: View {
         .cornerRadius(8)
     }
 }
+
+// MARK: - PreviewProvider
+struct MainAutoView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainAutoView(auto: Auto(
+            brand: "BMW",
+            model: "540i",
+            year: 2020,
+            vin: "AAAAAAAAAA"
+        ))
+        .previewLayout(.sizeThatFits)
+    }
+}

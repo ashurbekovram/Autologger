@@ -47,7 +47,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol>: View  {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    viewModel.editProfileView()
+                    viewModel.viewFactory?.createEditProfileView() ?? AnyView(EmptyView())
                 } label: {
                     Text("Edit")
                 }

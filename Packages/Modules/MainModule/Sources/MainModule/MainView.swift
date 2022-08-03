@@ -22,9 +22,6 @@ import Combine
 import Models
 import SwiftUI
 import UIComponents
-import ProfileService
-import MakesService
-import NetworkManager
 
 struct MainView<ViewModel: MainViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
@@ -70,7 +67,7 @@ struct MainView<ViewModel: MainViewModelProtocol>: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    LazyView(viewModel.createEditAutoView())
+                    viewModel.viewFactory?.createEditAutoView() ?? AnyView(EmptyView())
                 } label: {
                     Image(systemName: "plus")
                 }

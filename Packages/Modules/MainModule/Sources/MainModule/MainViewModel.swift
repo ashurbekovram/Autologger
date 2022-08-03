@@ -14,6 +14,8 @@ import SwiftUI
 import UserAutosService
 
 protocol MainViewModelProtocol: ObservableObject {
+    var viewFactory: MainViewFactory? { get }
+
     var errorMessage: String? { get }
     var isProfileLoading: Bool { get }
     var isAutosLoading: Bool { get }
@@ -21,7 +23,6 @@ protocol MainViewModelProtocol: ObservableObject {
     var autos: [Auto] { get }
 
     func onAppear()
-    func createEditAutoView() -> AnyView
 }
 
 final class MainViewModel: MainViewModelProtocol {
@@ -31,22 +32,22 @@ final class MainViewModel: MainViewModelProtocol {
     @Published private(set) var profile: Profile?
     @Published private(set) var autos: [Auto] = []
 
-    private var isFirstOpen: Bool = true
+    private(set) weak var viewFactory: MainViewFactory?
 
     private let profileService: ProfileService
     private let userAutosService: UserAutosService
-    private unowned var output: MainViewModelOutput
 
+    private var isFirstOpen: Bool = true
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
+        viewFactory: MainViewFactory?,
         profileService: ProfileService,
-        userAutosService: UserAutosService,
-        output: MainViewModelOutput
+        userAutosService: UserAutosService
     ) {
+        self.viewFactory = viewFactory
         self.profileService = profileService
         self.userAutosService = userAutosService
-        self.output = output
         setupBindings()
         print("\(type(of: self)) init")
     }
@@ -63,10 +64,6 @@ final class MainViewModel: MainViewModelProtocol {
 
         loadProfile()
         loadUserAutos()
-    }
-
-    func createEditAutoView() -> AnyView {
-        return output.createEditAutoView()
     }
 
     private func setupBindings() {

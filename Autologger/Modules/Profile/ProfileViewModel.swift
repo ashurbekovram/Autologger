@@ -17,7 +17,7 @@ struct ProfileState {
 }
 
 protocol ProfileViewModelProtocol: ObservableObject {
-    var editProfileView: (() -> AnyView) { get }
+    var viewFactory: ProfileViewFactory? { get }
 
     var isLoading: Bool { get }
     var profile: Profile? { get }
@@ -28,21 +28,21 @@ protocol ProfileViewModelProtocol: ObservableObject {
 }
 
 final class ProfileViewModel: ProfileViewModelProtocol {
+    private(set) weak var viewFactory: ProfileViewFactory?
+
     @Published private(set) var isLoading: Bool = true
     @Published private(set) var profile: Profile?
     @Published private(set) var error: Error?
-
-    private(set) var editProfileView: (() -> AnyView)
 
     private let profileService: ProfileService
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
-        profileService: ProfileService,
-        editProfileView: @escaping (() -> AnyView)
+        viewFactory: ProfileViewFactory?,
+        profileService: ProfileService
     ) {
+        self.viewFactory = viewFactory
         self.profileService = profileService
-        self.editProfileView = editProfileView
         setupBindings()
         print("\(type(of: self)) init")
     }

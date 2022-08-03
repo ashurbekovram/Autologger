@@ -12,7 +12,6 @@
 		3E0A37D5287B3D9800D9AD68 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A37D4287B3D9800D9AD68 /* EditProfileView.swift */; };
 		3E0A37D7287B3DA200D9AD68 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */; };
 		3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E164C72286F38BD006772F9 /* AutologgerApp.swift */; };
-		3E164C75286F38BD006772F9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E164C74286F38BD006772F9 /* MainView.swift */; };
 		3E164C77286F38BE006772F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C76286F38BE006772F9 /* Assets.xcassets */; };
 		3E164C7A286F38BE006772F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C79286F38BE006772F9 /* Preview Assets.xcassets */; };
 		3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AA928985D8B009DA1C5 /* MakesService */; };
@@ -20,25 +19,21 @@
 		3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E369AAD28985D92009DA1C5 /* UserAutosService */; };
 		3E445B1A286F57A2001F21A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E445B19286F57A2001F21A9 /* Colors.xcassets */; };
 		3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */; };
-		3E75C2D82895DE7400BB03C4 /* MainViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D72895DE7400BB03C4 /* MainViewModelOutput.swift */; };
 		3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */; };
 		3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */; };
 		3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */; };
 		3E75C2E22895F8E800BB03C4 /* EditAutoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */; };
 		3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */; };
+		3E79D148289A74C400EEE971 /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D147289A74C400EEE971 /* MainModule */; };
+		3E79D14C289A75B100EEE971 /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D14B289A75B100EEE971 /* EditAutoModule */; };
+		3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9228995AD30080597A /* AppViewFactory.swift */; };
+		3E8EEB9728995E710080597A /* ProfileViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9628995E710080597A /* ProfileViewFactory.swift */; };
 		3E974327287AF9BF00612625 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E974326287AF9BF00612625 /* ProfileView.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
 		3E977A7628985D0F0084E398 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7528985D0F0084E398 /* Models */; };
 		3E977A7828985D140084E398 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7728985D140084E398 /* UIComponents */; };
-		3E982BD4286F5C4C0017E6A5 /* MainAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E982BD3286F5C4C0017E6A5 /* MainAutoView.swift */; };
-		3E982BDC286F5FEB0017E6A5 /* EditAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E982BDB286F5FEB0017E6A5 /* EditAutoView.swift */; };
-		3E982BE0286F687F0017E6A5 /* EditAutoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E982BDF286F687F0017E6A5 /* EditAutoViewModel.swift */; };
 		3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386A287B51560037DA15 /* AppAssembler.swift */; };
-		3EC5386D287B5AB40037DA15 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386C287B5AB40037DA15 /* MainFlowCoordinator.swift */; };
-		3EC5386F287B61C00037DA15 /* ProfileFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386E287B61C00037DA15 /* ProfileFlowCoordinator.swift */; };
-		3EC53871287B635A0037DA15 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC53870287B635A0037DA15 /* Coordinator.swift */; };
 		3EF37ADC287B267A00399AF4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */; };
-		3EFD46F82878E285007619DD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD46F72878E285007619DD /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +52,6 @@
 		3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		3E164C6F286F38BD006772F9 /* Autologger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autologger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E164C72286F38BD006772F9 /* AutologgerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutologgerApp.swift; sourceTree = "<group>"; };
-		3E164C74286F38BD006772F9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3E164C76286F38BE006772F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E164C79286F38BE006772F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E369AA728985D6E009DA1C5 /* MakesService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MakesService; path = Packages/Services/MakesService; sourceTree = "<group>"; };
@@ -65,27 +59,23 @@
 		3E445B19286F57A2001F21A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutologgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
-		3E75C2D72895DE7400BB03C4 /* MainViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelOutput.swift; sourceTree = "<group>"; };
 		3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
 		3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAutosServiceMock.swift; sourceTree = "<group>"; };
 		3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelOutputMock.swift; sourceTree = "<group>"; };
 		3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoViewModelTests.swift; sourceTree = "<group>"; };
 		3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakesServiceMock.swift; sourceTree = "<group>"; };
+		3E79D146289A74BB00EEE971 /* MainModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MainModule; path = Packages/Modules/MainModule; sourceTree = "<group>"; };
+		3E79D14A289A75A900EEE971 /* EditAutoModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EditAutoModule; path = Packages/Modules/EditAutoModule; sourceTree = "<group>"; };
+		3E8EEB9228995AD30080597A /* AppViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewFactory.swift; sourceTree = "<group>"; };
+		3E8EEB9628995E710080597A /* ProfileViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewFactory.swift; sourceTree = "<group>"; };
 		3E974326287AF9BF00612625 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3E97432A287AFA9700612625 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		3E977A6F28985CAC0084E398 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = Packages/Common/Models; sourceTree = "<group>"; };
 		3E977A7028985CB70084E398 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIComponents; path = Packages/Common/UIComponents; sourceTree = "<group>"; };
 		3E977A7228985CD90084E398 /* ProfileService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileService; path = Packages/Services/ProfileService; sourceTree = "<group>"; };
 		3E977A7328985CE20084E398 /* UserAutosService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UserAutosService; path = Packages/Services/UserAutosService; sourceTree = "<group>"; };
-		3E982BD3286F5C4C0017E6A5 /* MainAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAutoView.swift; sourceTree = "<group>"; };
-		3E982BDB286F5FEB0017E6A5 /* EditAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoView.swift; sourceTree = "<group>"; };
-		3E982BDF286F687F0017E6A5 /* EditAutoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoViewModel.swift; sourceTree = "<group>"; };
 		3EC5386A287B51560037DA15 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
-		3EC5386C287B5AB40037DA15 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
-		3EC5386E287B61C00037DA15 /* ProfileFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowCoordinator.swift; sourceTree = "<group>"; };
-		3EC53870287B635A0037DA15 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		3EFD46F72878E285007619DD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +85,8 @@
 			files = (
 				3E099F1B28985FA60014A07C /* Extensions in Frameworks */,
 				3E369AAC28985D8F009DA1C5 /* ProfileService in Frameworks */,
+				3E79D148289A74C400EEE971 /* MainModule in Frameworks */,
+				3E79D14C289A75B100EEE971 /* EditAutoModule in Frameworks */,
 				3E977A7828985D140084E398 /* UIComponents in Frameworks */,
 				3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */,
 				3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */,
@@ -148,7 +140,7 @@
 				3E164C72286F38BD006772F9 /* AutologgerApp.swift */,
 				3E97432A287AFA9700612625 /* AppTabView.swift */,
 				3EC5386A287B51560037DA15 /* AppAssembler.swift */,
-				3EA0C256287B8316004EFE40 /* Coordinators */,
+				3E8EEB9228995AD30080597A /* AppViewFactory.swift */,
 				3EA0C257287B831F004EFE40 /* Modules */,
 				3E445B19286F57A2001F21A9 /* Colors.xcassets */,
 				3E164C76286F38BE006772F9 /* Assets.xcassets */,
@@ -207,6 +199,7 @@
 			children = (
 				3E974326287AF9BF00612625 /* ProfileView.swift */,
 				3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */,
+				3E8EEB9628995E710080597A /* ProfileViewFactory.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -221,57 +214,19 @@
 				3E977A7328985CE20084E398 /* UserAutosService */,
 				3E369AA728985D6E009DA1C5 /* MakesService */,
 				3E369AA828985D81009DA1C5 /* NetworkManager */,
+				3E79D146289A74BB00EEE971 /* MainModule */,
+				3E79D14A289A75A900EEE971 /* EditAutoModule */,
 			);
 			name = Packages;
-			sourceTree = "<group>";
-		};
-		3E982BD2286F5C420017E6A5 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				3EFD46F92878E28F007619DD /* Subviews */,
-				3E164C74286F38BD006772F9 /* MainView.swift */,
-				3EFD46F72878E285007619DD /* MainViewModel.swift */,
-				3E75C2D72895DE7400BB03C4 /* MainViewModelOutput.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		3E982BDE286F5FF50017E6A5 /* EditAuto */ = {
-			isa = PBXGroup;
-			children = (
-				3E982BDB286F5FEB0017E6A5 /* EditAutoView.swift */,
-				3E982BDF286F687F0017E6A5 /* EditAutoViewModel.swift */,
-			);
-			path = EditAuto;
-			sourceTree = "<group>";
-		};
-		3EA0C256287B8316004EFE40 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				3EC53870287B635A0037DA15 /* Coordinator.swift */,
-				3EC5386C287B5AB40037DA15 /* MainFlowCoordinator.swift */,
-				3EC5386E287B61C00037DA15 /* ProfileFlowCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		3EA0C257287B831F004EFE40 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3E982BD2286F5C420017E6A5 /* Main */,
-				3E982BDE286F5FF50017E6A5 /* EditAuto */,
 				3E97432C287AFB6100612625 /* Profile */,
 				3E0A37D8287B3E7400D9AD68 /* EditProfile */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		3EFD46F92878E28F007619DD /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				3E982BD3286F5C4C0017E6A5 /* MainAutoView.swift */,
-			);
-			path = Subviews;
 			sourceTree = "<group>";
 		};
 		3EFD47012878EB61007619DD /* Frameworks */ = {
@@ -304,6 +259,8 @@
 				3E369AAB28985D8F009DA1C5 /* ProfileService */,
 				3E369AAD28985D92009DA1C5 /* UserAutosService */,
 				3E099F1A28985FA60014A07C /* Extensions */,
+				3E79D147289A74C400EEE971 /* MainModule */,
+				3E79D14B289A75B100EEE971 /* EditAutoModule */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -394,20 +351,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0A37D7287B3DA200D9AD68 /* EditProfileViewModel.swift in Sources */,
-				3E982BD4286F5C4C0017E6A5 /* MainAutoView.swift in Sources */,
-				3EC53871287B635A0037DA15 /* Coordinator.swift in Sources */,
 				3E974327287AF9BF00612625 /* ProfileView.swift in Sources */,
-				3E75C2D82895DE7400BB03C4 /* MainViewModelOutput.swift in Sources */,
-				3E982BDC286F5FEB0017E6A5 /* EditAutoView.swift in Sources */,
 				3E0A37D5287B3D9800D9AD68 /* EditProfileView.swift in Sources */,
-				3EC5386D287B5AB40037DA15 /* MainFlowCoordinator.swift in Sources */,
-				3E164C75286F38BD006772F9 /* MainView.swift in Sources */,
 				3EF37ADC287B267A00399AF4 /* ProfileViewModel.swift in Sources */,
-				3E982BE0286F687F0017E6A5 /* EditAutoViewModel.swift in Sources */,
+				3E8EEB9728995E710080597A /* ProfileViewFactory.swift in Sources */,
 				3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */,
 				3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */,
-				3EFD46F82878E285007619DD /* MainViewModel.swift in Sources */,
-				3EC5386F287B61C00037DA15 /* ProfileFlowCoordinator.swift in Sources */,
+				3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */,
 				3E97432B287AFA9700612625 /* AppTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +648,14 @@
 		3E369AAD28985D92009DA1C5 /* UserAutosService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UserAutosService;
+		};
+		3E79D147289A74C400EEE971 /* MainModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MainModule;
+		};
+		3E79D14B289A75B100EEE971 /* EditAutoModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EditAutoModule;
 		};
 		3E977A7528985D0F0084E398 /* Models */ = {
 			isa = XCSwiftPackageProductDependency;

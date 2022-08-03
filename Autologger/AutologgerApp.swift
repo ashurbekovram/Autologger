@@ -11,10 +11,7 @@ import SwiftUI
 struct AutologgerApp: App {
     var body: some Scene {
         WindowGroup {
-            AppTabView(
-                mainFlowCoordinator: MainFlowCoordinator(),
-                profileFlowCoordinator: ProfileFlowCoordinator()
-            )
+            AppTabView()
         }
     }
 }

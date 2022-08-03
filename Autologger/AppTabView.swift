@@ -9,13 +9,10 @@ import SwiftUI
 import ProfileService
 
 struct AppTabView: View {
-    @State var mainFlowCoordinator: Coordinator
-    @State var profileFlowCoordinator: Coordinator
-
     var body: some View {
         TabView {
             NavigationView {
-                mainFlowCoordinator.start()
+                AppViewFactory.shared.createMainView()
             }
             .navigationViewStyle(.stack)
             .tabItem {
@@ -23,7 +20,7 @@ struct AppTabView: View {
                 Text("Main")
             }
             NavigationView {
-                profileFlowCoordinator.start()
+                AppViewFactory.shared.createProfileView()
             }
             .navigationViewStyle(.stack)
             .tabItem {
