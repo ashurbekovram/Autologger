@@ -7,7 +7,7 @@
 
 import Combine
 import Foundation
-import MakesService
+import MakesServiceInterface
 import Models
 import UserAutosService
 

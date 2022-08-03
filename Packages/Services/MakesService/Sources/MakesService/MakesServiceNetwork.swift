@@ -6,6 +6,7 @@
 //
 
 import Combine
+import MakesServiceInterface
 import Models
 import NetworkManagerInterface
 

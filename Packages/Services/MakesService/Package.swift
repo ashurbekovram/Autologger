@@ -13,6 +13,10 @@ let package = Package(
             name: "MakesService",
             targets: ["MakesService"]
         ),
+        .library(
+            name: "MakesServiceInterface",
+            targets: ["MakesServiceInterface"]
+        ),
     ],
     dependencies: [
         .package(name: "Models", path: "../Common/Models"),
@@ -22,8 +26,15 @@ let package = Package(
         .target(
             name: "MakesService",
             dependencies: [
+                "MakesServiceInterface",
                 .product(name: "Models", package: "Models"),
                 .product(name: "NetworkManagerInterface", package: "NetworkManager"),
+            ]
+        ),
+        .target(
+            name: "MakesServiceInterface",
+            dependencies: [
+                .product(name: "Models", package: "Models"),
             ]
         ),
         .testTarget(

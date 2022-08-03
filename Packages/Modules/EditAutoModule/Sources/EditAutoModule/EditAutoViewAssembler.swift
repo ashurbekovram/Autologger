@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import MakesService
+import MakesServiceInterface
 import UserAutosService
 
 public struct EditAutoInputModel {

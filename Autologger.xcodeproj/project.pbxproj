@@ -29,6 +29,7 @@
 		3E7A6F3C289A837900F7C80C /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3B289A837900F7C80C /* MainModule */; };
 		3E7A6F3E289A837D00F7C80C /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3D289A837D00F7C80C /* ProfileModule */; };
 		3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3F289A838000F7C80C /* EditAutoModule */; };
+		3E7A6F42289A871000F7C80C /* MakesServiceInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F41289A871000F7C80C /* MakesServiceInterface */; };
 		3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9228995AD30080597A /* AppViewFactory.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
 		3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386A287B51560037DA15 /* AppAssembler.swift */; };
@@ -85,6 +86,7 @@
 				3E7A6F2C289A834200F7C80C /* Extensions in Frameworks */,
 				3E7A6F36289A835B00F7C80C /* ProfileService in Frameworks */,
 				3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */,
+				3E7A6F42289A871000F7C80C /* MakesServiceInterface in Frameworks */,
 				3E7A6F3C289A837900F7C80C /* MainModule in Frameworks */,
 				3E7A6F3E289A837D00F7C80C /* ProfileModule in Frameworks */,
 				3E7A6F32289A835200F7C80C /* NetworkManager in Frameworks */,
@@ -257,6 +259,7 @@
 				3E7A6F3B289A837900F7C80C /* MainModule */,
 				3E7A6F3D289A837D00F7C80C /* ProfileModule */,
 				3E7A6F3F289A838000F7C80C /* EditAutoModule */,
+				3E7A6F41289A871000F7C80C /* MakesServiceInterface */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -667,6 +670,10 @@
 		3E7A6F3F289A838000F7C80C /* EditAutoModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EditAutoModule;
+		};
+		3E7A6F41289A871000F7C80C /* MakesServiceInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MakesServiceInterface;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

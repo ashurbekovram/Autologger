@@ -25,7 +25,7 @@ let package = Package(
             name: "EditAutoModule",
             dependencies: [
                 .product(name: "Models", package: "Models"),
-                .product(name: "MakesService", package: "MakesService"),
+                .product(name: "MakesServiceInterface", package: "MakesService"),
                 .product(name: "UserAutosService", package: "UserAutosService"),
                 .product(name: "UIComponents", package: "UIComponents"),
             ]

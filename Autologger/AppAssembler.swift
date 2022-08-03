@@ -7,6 +7,7 @@
 
 import Foundation
 import MakesService
+import MakesServiceInterface
 import NetworkManager
 import NetworkManagerInterface
 import ProfileService
