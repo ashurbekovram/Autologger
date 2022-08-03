@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-protocol ProfileViewFactory: AnyObject {
+public protocol ProfileViewFactory: AnyObject {
     func createEditProfileView() -> AnyView
 }

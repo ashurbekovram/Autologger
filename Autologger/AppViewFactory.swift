@@ -7,6 +7,7 @@
 
 import EditAutoModule
 import MainModule
+import ProfileModule
 import SwiftUI
 
 final class AppViewFactory {
@@ -24,11 +25,11 @@ final class AppViewFactory {
     }
 
     func createProfileView() -> AnyView {
-        let viewModel = ProfileViewModel(
-            viewFactory: self,
-            profileService: AppAssembler.profileService
+        let inputModel = ProfileModuleInputModel(
+            profileService: AppAssembler.profileService,
+            viewFactory: self
         )
-        return AnyView(ProfileView(viewModel: viewModel))
+        return ProfileModuleAssembler.assembleModule(with: inputModel)
     }
 }
 

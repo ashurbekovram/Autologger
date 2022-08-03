@@ -26,14 +26,12 @@
 		3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */; };
 		3E79D148289A74C400EEE971 /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D147289A74C400EEE971 /* MainModule */; };
 		3E79D14C289A75B100EEE971 /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D14B289A75B100EEE971 /* EditAutoModule */; };
+		3E84DA9B289A763E00F75932 /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E84DA9A289A763E00F75932 /* ProfileModule */; };
 		3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9228995AD30080597A /* AppViewFactory.swift */; };
-		3E8EEB9728995E710080597A /* ProfileViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9628995E710080597A /* ProfileViewFactory.swift */; };
-		3E974327287AF9BF00612625 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E974326287AF9BF00612625 /* ProfileView.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
 		3E977A7628985D0F0084E398 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7528985D0F0084E398 /* Models */; };
 		3E977A7828985D140084E398 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7728985D140084E398 /* UIComponents */; };
 		3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386A287B51560037DA15 /* AppAssembler.swift */; };
-		3EF37ADC287B267A00399AF4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,16 +64,14 @@
 		3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakesServiceMock.swift; sourceTree = "<group>"; };
 		3E79D146289A74BB00EEE971 /* MainModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MainModule; path = Packages/Modules/MainModule; sourceTree = "<group>"; };
 		3E79D14A289A75A900EEE971 /* EditAutoModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EditAutoModule; path = Packages/Modules/EditAutoModule; sourceTree = "<group>"; };
+		3E84DA99289A763200F75932 /* ProfileModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileModule; path = Packages/Modules/ProfileModule; sourceTree = "<group>"; };
 		3E8EEB9228995AD30080597A /* AppViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewFactory.swift; sourceTree = "<group>"; };
-		3E8EEB9628995E710080597A /* ProfileViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewFactory.swift; sourceTree = "<group>"; };
-		3E974326287AF9BF00612625 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3E97432A287AFA9700612625 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		3E977A6F28985CAC0084E398 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = Packages/Common/Models; sourceTree = "<group>"; };
 		3E977A7028985CB70084E398 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIComponents; path = Packages/Common/UIComponents; sourceTree = "<group>"; };
 		3E977A7228985CD90084E398 /* ProfileService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileService; path = Packages/Services/ProfileService; sourceTree = "<group>"; };
 		3E977A7328985CE20084E398 /* UserAutosService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UserAutosService; path = Packages/Services/UserAutosService; sourceTree = "<group>"; };
 		3EC5386A287B51560037DA15 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
-		3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +86,7 @@
 				3E977A7828985D140084E398 /* UIComponents in Frameworks */,
 				3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */,
 				3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */,
+				3E84DA9B289A763E00F75932 /* ProfileModule in Frameworks */,
 				3E977A7628985D0F0084E398 /* Models in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,16 +191,6 @@
 			path = EditAuto;
 			sourceTree = "<group>";
 		};
-		3E97432C287AFB6100612625 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				3E974326287AF9BF00612625 /* ProfileView.swift */,
-				3EF37ADB287B267A00399AF4 /* ProfileViewModel.swift */,
-				3E8EEB9628995E710080597A /* ProfileViewFactory.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		3E977A6E28985CAC0084E398 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +203,7 @@
 				3E369AA828985D81009DA1C5 /* NetworkManager */,
 				3E79D146289A74BB00EEE971 /* MainModule */,
 				3E79D14A289A75A900EEE971 /* EditAutoModule */,
+				3E84DA99289A763200F75932 /* ProfileModule */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -223,7 +211,6 @@
 		3EA0C257287B831F004EFE40 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3E97432C287AFB6100612625 /* Profile */,
 				3E0A37D8287B3E7400D9AD68 /* EditProfile */,
 			);
 			path = Modules;
@@ -261,6 +248,7 @@
 				3E099F1A28985FA60014A07C /* Extensions */,
 				3E79D147289A74C400EEE971 /* MainModule */,
 				3E79D14B289A75B100EEE971 /* EditAutoModule */,
+				3E84DA9A289A763E00F75932 /* ProfileModule */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -351,10 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0A37D7287B3DA200D9AD68 /* EditProfileViewModel.swift in Sources */,
-				3E974327287AF9BF00612625 /* ProfileView.swift in Sources */,
 				3E0A37D5287B3D9800D9AD68 /* EditProfileView.swift in Sources */,
-				3EF37ADC287B267A00399AF4 /* ProfileViewModel.swift in Sources */,
-				3E8EEB9728995E710080597A /* ProfileViewFactory.swift in Sources */,
 				3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */,
 				3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */,
 				3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */,
@@ -656,6 +641,10 @@
 		3E79D14B289A75B100EEE971 /* EditAutoModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EditAutoModule;
+		};
+		3E84DA9A289A763E00F75932 /* ProfileModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProfileModule;
 		};
 		3E977A7528985D0F0084E398 /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
