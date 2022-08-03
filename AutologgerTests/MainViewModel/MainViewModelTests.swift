@@ -6,29 +6,27 @@
 //
 
 import Combine
+import Models
 import XCTest
 
 @testable import Autologger
-@testable import Models
+@testable import MainModule
 
 final class MainViewModelTests: XCTestCase {
-
-    private var userAutosService: UserAutosServiceMock!
     private var profileService: ProfileServiceMock!
-    private var mainViewModelOutput: MainViewModelOutputMock!
+    private var userAutosService: UserAutosServiceMock!
     private var mainViewModel: MainViewModel!
 
     private var cancellableSet = Set<AnyCancellable>()
 
     // Запускается перед каждым тестом
     override func setUpWithError() throws {
-        userAutosService = UserAutosServiceMock()
         profileService = ProfileServiceMock()
-        mainViewModelOutput = MainViewModelOutputMock()
+        userAutosService = UserAutosServiceMock()
         mainViewModel = MainViewModel(
+            viewFactory: nil,
             profileService: profileService,
-            userAutosService: userAutosService,
-            output: mainViewModelOutput
+            userAutosService: userAutosService
         )
     }
 
@@ -36,7 +34,6 @@ final class MainViewModelTests: XCTestCase {
     override func tearDownWithError() throws {
         userAutosService = nil
         profileService = nil
-        mainViewModelOutput = nil
         mainViewModel = nil
     }
 
@@ -74,20 +71,4 @@ final class MainViewModelTests: XCTestCase {
         // then
         wait(for: [expectationProfile, expectationAutos], timeout: 1)
     }
-
-//    func testCreateEditAuto() {
-//        mainViewModel.createEditAutoView()
-//        XCTAssert(mainViewModelOutput.isCreateEditAutoViewCalled)
-//    }
-//
-//    func testPerformanceExample() {
-//        measure(metrics: [
-//            XCTClockMetric(),
-//            XCTCPUMetric(),
-//            XCTStorageMetric(),
-//            XCTMemoryMetric()
-//        ]) {
-//            mainViewModel.onAppear()
-//        }
-//    }
 }

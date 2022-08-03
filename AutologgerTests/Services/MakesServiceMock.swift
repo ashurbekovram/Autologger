@@ -6,8 +6,8 @@
 //
 
 import Combine
-@testable import MakesService
-@testable import Models
+import Models
+import MakesServiceInterface
 
 final class MakesServiceMock: MakesService {
     var makes: CurrentValueSubject<[Make], Never> = .init([])

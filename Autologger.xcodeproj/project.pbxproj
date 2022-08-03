@@ -15,7 +15,6 @@
 		3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */; };
 		3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */; };
 		3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */; };
-		3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */; };
 		3E75C2E22895F8E800BB03C4 /* EditAutoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */; };
 		3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */; };
 		3E7A6F2C289A834200F7C80C /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F2B289A834200F7C80C /* Extensions */; };
@@ -59,7 +58,6 @@
 		3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
 		3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAutosServiceMock.swift; sourceTree = "<group>"; };
-		3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelOutputMock.swift; sourceTree = "<group>"; };
 		3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoViewModelTests.swift; sourceTree = "<group>"; };
 		3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakesServiceMock.swift; sourceTree = "<group>"; };
 		3E79D146289A74BB00EEE971 /* MainModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MainModule; path = Packages/Modules/MainModule; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */,
-				3E75C2DD2895EAD100BB03C4 /* MainViewModelOutputMock.swift */,
 			);
 			path = MainViewModel;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 			files = (
 				3E75C2E22895F8E800BB03C4 /* EditAutoViewModelTests.swift in Sources */,
 				3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */,
-				3E75C2DE2895EAD100BB03C4 /* MainViewModelOutputMock.swift in Sources */,
 				3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */,
 				3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */,
 				3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */,

@@ -5,12 +5,13 @@
 //  Created by Ramazan Ashurbekov on 31.07.2022.
 //
 
-import TestExtensions
 import Combine
+import Models
+import TestExtensions
 import XCTest
 
 @testable import Autologger
-@testable import Models
+@testable import EditAutoModule
 
 final class EditAutoViewModelTests: XCTestCase {
     private var makesService: MakesServiceMock!

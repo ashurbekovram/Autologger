@@ -7,7 +7,7 @@
 
 import Combine
 @testable import Models
-@testable import ProfileService
+@testable import ProfileServiceInterface
 
 final class ProfileServiceMock: ProfileService {
     var profile: CurrentValueSubject<Profile?, Never> = .init(nil)
