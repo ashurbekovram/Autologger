@@ -5,7 +5,7 @@
 //  Created by Ramazan Ashurbekov on 03.08.2022.
 //
 
-import ProfileService
+import ProfileServiceInterface
 import SwiftUI
 
 public struct ProfileInputModel {

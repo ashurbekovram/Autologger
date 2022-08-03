@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 import Models
+import ProfileServiceInterface
 
 public final class ProfileServiceLocal: ProfileService {
     private let userDefaults = UserDefaults.standard

@@ -13,6 +13,10 @@ let package = Package(
             name: "ProfileService",
             targets: ["ProfileService"]
         ),
+        .library(
+            name: "ProfileServiceInterface",
+            targets: ["ProfileServiceInterface"]
+        )
     ],
     dependencies: [
         .package(name: "Models", path: "../Common/Models"),
@@ -23,8 +27,15 @@ let package = Package(
         .target(
             name: "ProfileService",
             dependencies: [
+                "ProfileServiceInterface",
                 .product(name: "Models", package: "Models"),
                 .product(name: "NetworkManagerInterface", package: "NetworkManager"),
+            ]
+        ),
+        .target(
+            name: "ProfileServiceInterface",
+            dependencies: [
+                .product(name: "Models", package: "Models"),
             ]
         ),
         .testTarget(

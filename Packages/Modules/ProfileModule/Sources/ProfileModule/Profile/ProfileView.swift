@@ -5,10 +5,8 @@
 //  Created by Ramazan Ashurbekov on 10.07.2022.
 //
 
-import Models
 import SwiftUI
 import UIComponents
-import ProfileService
 
 struct ProfileView<ViewModel: ProfileViewModelProtocol>: View  {
     @ObservedObject var viewModel: ViewModel

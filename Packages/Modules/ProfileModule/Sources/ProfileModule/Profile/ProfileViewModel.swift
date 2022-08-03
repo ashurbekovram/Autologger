@@ -7,7 +7,7 @@
 
 import Combine
 import Models
-import ProfileService
+import ProfileServiceInterface
 import SwiftUI
 
 struct ProfileState {

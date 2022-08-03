@@ -11,6 +11,7 @@ import MakesServiceInterface
 import NetworkManager
 import NetworkManagerInterface
 import ProfileService
+import ProfileServiceInterface
 import SwiftUI
 import UserAutosService
 

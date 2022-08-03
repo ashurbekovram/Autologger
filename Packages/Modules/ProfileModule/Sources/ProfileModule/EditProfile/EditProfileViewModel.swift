@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 import Models
-import ProfileService
+import ProfileServiceInterface
 
 protocol EditProfileViewModelProtocol: ObservableObject {
     var isLoading: Bool { get }

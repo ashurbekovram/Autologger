@@ -6,7 +6,6 @@
 //
 
 import Combine
-import Foundation
 import Models
 
 public protocol ProfileService {

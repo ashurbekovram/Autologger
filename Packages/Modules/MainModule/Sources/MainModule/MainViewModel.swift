@@ -9,7 +9,7 @@ import Combine
 import Extensions
 import Foundation
 import Models
-import ProfileService
+import ProfileServiceInterface
 import SwiftUI
 import UserAutosService
 

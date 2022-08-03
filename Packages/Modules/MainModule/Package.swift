@@ -25,7 +25,7 @@ let package = Package(
             name: "MainModule",
             dependencies: [
                 .product(name: "Models", package: "Models"),
-                .product(name: "ProfileService", package: "ProfileService"),
+                .product(name: "ProfileServiceInterface", package: "ProfileService"),
                 .product(name: "UserAutosService", package: "UserAutosService"),
                 .product(name: "UIComponents", package: "UIComponents"),
             ]
