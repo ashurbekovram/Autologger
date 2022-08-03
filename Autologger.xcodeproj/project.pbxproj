@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E099F1B28985FA60014A07C /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E099F1A28985FA60014A07C /* Extensions */; };
 		3E099F1D289861D00014A07C /* TestExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 3E099F1C289861D00014A07C /* TestExtensions */; };
-		3E0A37D5287B3D9800D9AD68 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A37D4287B3D9800D9AD68 /* EditProfileView.swift */; };
-		3E0A37D7287B3DA200D9AD68 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */; };
 		3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E164C72286F38BD006772F9 /* AutologgerApp.swift */; };
 		3E164C77286F38BE006772F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C76286F38BE006772F9 /* Assets.xcassets */; };
 		3E164C7A286F38BE006772F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C79286F38BE006772F9 /* Preview Assets.xcassets */; };
@@ -26,7 +24,7 @@
 		3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */; };
 		3E79D148289A74C400EEE971 /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D147289A74C400EEE971 /* MainModule */; };
 		3E79D14C289A75B100EEE971 /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E79D14B289A75B100EEE971 /* EditAutoModule */; };
-		3E84DA9B289A763E00F75932 /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E84DA9A289A763E00F75932 /* ProfileModule */; };
+		3E84DA9F289A7D4300F75932 /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E84DA9E289A7D4300F75932 /* ProfileModule */; };
 		3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9228995AD30080597A /* AppViewFactory.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
 		3E977A7628985D0F0084E398 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3E977A7528985D0F0084E398 /* Models */; };
@@ -46,8 +44,6 @@
 
 /* Begin PBXFileReference section */
 		3E099F1928985F290014A07C /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Extensions; path = Packages/Common/Extensions; sourceTree = "<group>"; };
-		3E0A37D4287B3D9800D9AD68 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
-		3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		3E164C6F286F38BD006772F9 /* Autologger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autologger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E164C72286F38BD006772F9 /* AutologgerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutologgerApp.swift; sourceTree = "<group>"; };
 		3E164C76286F38BE006772F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +82,7 @@
 				3E977A7828985D140084E398 /* UIComponents in Frameworks */,
 				3E369AAE28985D92009DA1C5 /* UserAutosService in Frameworks */,
 				3E369AAA28985D8B009DA1C5 /* MakesService in Frameworks */,
-				3E84DA9B289A763E00F75932 /* ProfileModule in Frameworks */,
+				3E84DA9F289A7D4300F75932 /* ProfileModule in Frameworks */,
 				3E977A7628985D0F0084E398 /* Models in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,19 +98,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E0A37D8287B3E7400D9AD68 /* EditProfile */ = {
-			isa = PBXGroup;
-			children = (
-				3E0A37D4287B3D9800D9AD68 /* EditProfileView.swift */,
-				3E0A37D6287B3DA200D9AD68 /* EditProfileViewModel.swift */,
-			);
-			path = EditProfile;
-			sourceTree = "<group>";
-		};
 		3E164C66286F38BD006772F9 = {
 			isa = PBXGroup;
 			children = (
-				3E977A6E28985CAC0084E398 /* Packages */,
+				3EF14903289A7DCA00CAA439 /* Common */,
+				3EF14904289A7DEB00CAA439 /* Managers */,
+				3EF14905289A7E0100CAA439 /* Services */,
+				3EF14906289A7E1800CAA439 /* Modules */,
 				3E164C71286F38BD006772F9 /* Autologger */,
 				3E75C2CD2895CCE100BB03C4 /* AutologgerTests */,
 				3E164C70286F38BD006772F9 /* Products */,
@@ -138,7 +128,6 @@
 				3E97432A287AFA9700612625 /* AppTabView.swift */,
 				3EC5386A287B51560037DA15 /* AppAssembler.swift */,
 				3E8EEB9228995AD30080597A /* AppViewFactory.swift */,
-				3EA0C257287B831F004EFE40 /* Modules */,
 				3E445B19286F57A2001F21A9 /* Colors.xcassets */,
 				3E164C76286F38BE006772F9 /* Assets.xcassets */,
 				3E164C78286F38BE006772F9 /* Preview Content */,
@@ -191,29 +180,42 @@
 			path = EditAuto;
 			sourceTree = "<group>";
 		};
-		3E977A6E28985CAC0084E398 /* Packages */ = {
+		3EF14903289A7DCA00CAA439 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				3E099F1928985F290014A07C /* Extensions */,
 				3E977A6F28985CAC0084E398 /* Models */,
 				3E977A7028985CB70084E398 /* UIComponents */,
-				3E977A7228985CD90084E398 /* ProfileService */,
-				3E977A7328985CE20084E398 /* UserAutosService */,
-				3E369AA728985D6E009DA1C5 /* MakesService */,
-				3E369AA828985D81009DA1C5 /* NetworkManager */,
-				3E79D146289A74BB00EEE971 /* MainModule */,
-				3E79D14A289A75A900EEE971 /* EditAutoModule */,
-				3E84DA99289A763200F75932 /* ProfileModule */,
 			);
-			name = Packages;
+			name = Common;
 			sourceTree = "<group>";
 		};
-		3EA0C257287B831F004EFE40 /* Modules */ = {
+		3EF14904289A7DEB00CAA439 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				3E0A37D8287B3E7400D9AD68 /* EditProfile */,
+				3E369AA828985D81009DA1C5 /* NetworkManager */,
 			);
-			path = Modules;
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		3EF14905289A7E0100CAA439 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E369AA728985D6E009DA1C5 /* MakesService */,
+				3E977A7228985CD90084E398 /* ProfileService */,
+				3E977A7328985CE20084E398 /* UserAutosService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		3EF14906289A7E1800CAA439 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3E79D14A289A75A900EEE971 /* EditAutoModule */,
+				3E79D146289A74BB00EEE971 /* MainModule */,
+				3E84DA99289A763200F75932 /* ProfileModule */,
+			);
+			name = Modules;
 			sourceTree = "<group>";
 		};
 		3EFD47012878EB61007619DD /* Frameworks */ = {
@@ -248,7 +250,7 @@
 				3E099F1A28985FA60014A07C /* Extensions */,
 				3E79D147289A74C400EEE971 /* MainModule */,
 				3E79D14B289A75B100EEE971 /* EditAutoModule */,
-				3E84DA9A289A763E00F75932 /* ProfileModule */,
+				3E84DA9E289A7D4300F75932 /* ProfileModule */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -338,8 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E0A37D7287B3DA200D9AD68 /* EditProfileViewModel.swift in Sources */,
-				3E0A37D5287B3D9800D9AD68 /* EditProfileView.swift in Sources */,
 				3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */,
 				3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */,
 				3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */,
@@ -642,7 +642,7 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = EditAutoModule;
 		};
-		3E84DA9A289A763E00F75932 /* ProfileModule */ = {
+		3E84DA9E289A7D4300F75932 /* ProfileModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProfileModule;
 		};

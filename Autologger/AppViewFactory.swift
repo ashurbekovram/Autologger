@@ -25,11 +25,11 @@ final class AppViewFactory {
     }
 
     func createProfileView() -> AnyView {
-        let inputModel = ProfileModuleInputModel(
+        let inputModel = ProfileInputModel(
             profileService: AppAssembler.profileService,
             viewFactory: self
         )
-        return ProfileModuleAssembler.assembleModule(with: inputModel)
+        return ProfileAssembler.assembleModule(with: inputModel)
     }
 }
 
@@ -43,10 +43,9 @@ extension AppViewFactory: MainViewFactory {
     }
 }
 
-
 extension AppViewFactory: ProfileViewFactory {
     func createEditProfileView() -> AnyView {
-        let viewModel = EditProfileViewModel(profileService: AppAssembler.profileService)
-        return AnyView(EditProfileView(viewModel: viewModel))
+        let inputModel = EditProfileInputModel(profileService: AppAssembler.profileService)
+        return EditProfileAssembler.assembleModule(with: inputModel)
     }
 }
