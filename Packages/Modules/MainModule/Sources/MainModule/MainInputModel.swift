@@ -24,14 +24,3 @@ public struct MainInputModel {
         self.viewFactory = viewFactory
     }
 }
-
-public final class MainAssembler {
-    public static func assembleModule(with inputModel: MainInputModel) -> AnyView {
-        let viewModel = MainViewModel(
-            viewFactory: inputModel.viewFactory,
-            profileService: inputModel.profileService,
-            userAutosService: inputModel.userAutosService
-        )
-        return AnyView(MainView(viewModel: viewModel))
-    }
-}

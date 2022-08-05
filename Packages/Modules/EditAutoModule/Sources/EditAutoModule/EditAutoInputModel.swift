@@ -21,13 +21,3 @@ public struct EditAutoInputModel {
         self.userAutosService = userAutosService
     }
 }
-
-public final class EditAutoViewAssembler {
-    public static func assembleModule(with inputModel: EditAutoInputModel) -> some View {
-        let viewModel = EditAutoViewModel(
-            makesService: inputModel.makesService,
-            userAutosService: inputModel.userAutosService
-        )
-        return EditAutoView(viewModel: viewModel)
-    }
-}

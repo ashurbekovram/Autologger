@@ -11,16 +11,27 @@ import MakesService
 import Models
 import NetworkManager
 
-struct EditAutoView<ViewModel: EditAutoViewModelProtocol>: View {
-    @StateObject var viewModel: ViewModel
+public struct EditAutoView: View {
+    @StateObject private var viewModel: EditAutoViewModel
+
+    public init(inputModel: EditAutoInputModel) {
+        _viewModel = StateObject(wrappedValue: EditAutoViewModel(
+            makesService: inputModel.makesService,
+            userAutosService: inputModel.userAutosService
+        ))
+    }
 
     @State private var showMakePicker: Bool = false
     @State private var showYearPicker: Bool = false
 
-    var body: some View {
+    public var body: some View {
         ScrollView {
             if viewModel.isLoading {
-                ProgressView()
+                HStack {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                }
             } else {
                 VStack {
                     VStack {

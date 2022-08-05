@@ -11,22 +11,7 @@ import MakesServiceInterface
 import Models
 import UserAutosService
 
-protocol EditAutoViewModelProtocol: ObservableObject {
-    var isLoading: Bool { get }
-    var error: Error? { get }
-    var makes: [Make] { get }
-    var years: [Int] { get }
-
-    var selectedMake: Make? { get set }
-    var selectedYear: Int { get set }
-    var model: String { get set }
-    var vin: String { get set }
-
-    func fetchMakes()
-    func save()
-}
-
-final class EditAutoViewModel: EditAutoViewModelProtocol {
+final class EditAutoViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = true
     @Published private(set) var error: Error?
     @Published private(set) var makes: [Make] = []

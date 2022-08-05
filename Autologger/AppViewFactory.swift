@@ -21,7 +21,7 @@ final class AppViewFactory {
             userAutosService: AppAssembler.userAutosService,
             viewFactory: self
         )
-        return MainAssembler.assembleModule(with: inputModel)
+        return AnyView(MainView(inputModel: inputModel))
     }
 
     func createProfileView() -> AnyView {
@@ -39,7 +39,7 @@ extension AppViewFactory: MainViewFactory {
             makesService: AppAssembler.makesService,
             userAutosService: AppAssembler.userAutosService
         )
-        return AnyView(EditAutoViewAssembler.assembleModule(with: inputModel))
+        return AnyView(EditAutoView(inputModel: inputModel))
     }
 }
 

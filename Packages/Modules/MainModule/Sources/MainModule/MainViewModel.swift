@@ -13,19 +13,7 @@ import ProfileServiceInterface
 import SwiftUI
 import UserAutosService
 
-protocol MainViewModelProtocol: ObservableObject {
-    var viewFactory: MainViewFactory? { get }
-
-    var errorMessage: String? { get }
-    var isProfileLoading: Bool { get }
-    var isAutosLoading: Bool { get }
-    var profile: Profile? { get }
-    var autos: [Auto] { get }
-
-    func onAppear()
-}
-
-final class MainViewModel: MainViewModelProtocol {
+final class MainViewModel: ObservableObject {
     @Published private(set) var errorMessage: String?
     @Published private(set) var isProfileLoading: Bool = true
     @Published private(set) var isAutosLoading: Bool = true

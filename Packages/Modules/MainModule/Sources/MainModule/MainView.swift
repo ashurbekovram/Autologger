@@ -23,10 +23,18 @@ import Models
 import SwiftUI
 import UIComponents
 
-struct MainView<ViewModel: MainViewModelProtocol>: View {
-    @StateObject var viewModel: ViewModel
+public struct MainView: View {
+    @StateObject private var viewModel: MainViewModel
 
-    var body: some View {
+    public init(inputModel: MainInputModel) {
+        _viewModel = StateObject(wrappedValue: MainViewModel(
+            viewFactory: inputModel.viewFactory,
+            profileService: inputModel.profileService,
+            userAutosService: inputModel.userAutosService
+        ))
+    }
+
+    public var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 20) {
                 if viewModel.isProfileLoading {
