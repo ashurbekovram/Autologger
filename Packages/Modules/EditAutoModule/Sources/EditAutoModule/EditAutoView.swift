@@ -12,7 +12,7 @@ import Models
 import NetworkManager
 
 struct EditAutoView<ViewModel: EditAutoViewModelProtocol>: View {
-    @ObservedObject var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
 
     @State private var showMakePicker: Bool = false
     @State private var showYearPicker: Bool = false
@@ -114,30 +114,5 @@ struct EditAutoView<ViewModel: EditAutoViewModelProtocol>: View {
         .onDisappear {
             print("View onDisappear")
         }
-    }
-}
-
-
-final class EditAutoViewModelMock: EditAutoViewModelProtocol {
-    @Published var isLoading: Bool = false
-    @Published var error: Error? = nil
-    @Published var makes: [Make] = []
-    @Published var years: [Int] = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013]
-
-    @Published var selectedMake: Make? = nil
-    @Published var selectedYear: Int = 2005
-    @Published var model: String = ""
-    @Published var vin: String = ""
-
-    func fetchMakes() {
-    }
-
-    func save() {
-    }
-}
-
-struct EditAutoView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditAutoView(viewModel: EditAutoViewModelMock())
     }
 }

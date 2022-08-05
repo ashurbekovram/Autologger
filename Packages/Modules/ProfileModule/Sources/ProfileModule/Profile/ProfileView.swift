@@ -9,7 +9,7 @@ import SwiftUI
 import UIComponents
 
 struct ProfileView<ViewModel: ProfileViewModelProtocol>: View  {
-    @ObservedObject var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
 
     var body: some View {
         ScrollView {

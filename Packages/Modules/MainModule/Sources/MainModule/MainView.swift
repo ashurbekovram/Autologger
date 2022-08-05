@@ -24,7 +24,7 @@ import SwiftUI
 import UIComponents
 
 struct MainView<ViewModel: MainViewModelProtocol>: View {
-    @ObservedObject var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
 
     var body: some View {
         ScrollView {
