@@ -37,9 +37,5 @@ let package = Package(
                 .product(name: "Models", package: "Models"),
             ]
         ),
-        .testTarget(
-            name: "MakesServiceTests",
-            dependencies: ["MakesService"]
-        ),
     ]
 )

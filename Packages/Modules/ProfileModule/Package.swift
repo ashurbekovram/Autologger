@@ -28,9 +28,5 @@ let package = Package(
                 .product(name: "UIComponents", package: "UIComponents"),
             ]
         ),
-        .testTarget(
-            name: "ProfileModuleTests",
-            dependencies: ["ProfileModule"]
-        ),
     ]
 )

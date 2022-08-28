@@ -26,9 +26,5 @@ let package = Package(
                 .product(name: "NetworkManagerInterface", package: "NetworkManager"),
             ]
         ),
-        .testTarget(
-            name: "UserAutosServiceTests",
-            dependencies: ["UserAutosService"]
-        ),
     ]
 )
