@@ -10,8 +10,9 @@ import Models
 import ProfileServiceInterface
 
 final class AppTabViewModel: ObservableObject {
+    let appTabFactory: AppTabViewFactory
+
     private let profileService: ProfileService
-    private let appTabFactory: AppTabViewFactory
 
     @Published private(set) var profile: Profile?
 

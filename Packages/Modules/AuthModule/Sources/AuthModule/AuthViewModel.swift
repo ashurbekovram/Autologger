@@ -8,5 +8,8 @@
 import Foundation
 
 final class AuthViewModel: ObservableObject {
+    @Published var login: String = ""
+    @Published var password: String = ""
+
     init() {}
 }

@@ -29,7 +29,11 @@ struct AppTabView: View {
                 Text("Main")
             }
             NavigationView {
-                AppViewFactory.shared.createProfileView()
+                if viewModel.profile != nil {
+                    viewModel.appTabFactory.createProfileView()
+                } else {
+                    viewModel.appTabFactory.createAuthView()
+                }
             }
             .navigationViewStyle(.stack)
             .tabItem {

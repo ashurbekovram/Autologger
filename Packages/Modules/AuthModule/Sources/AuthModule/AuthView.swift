@@ -15,6 +15,16 @@ public struct AuthView: View {
     }
 
     public var body: some View {
-        Text("Auth")
+        ScrollView {
+            VStack {
+                TextField("Login", text: $viewModel.login)
+                TextField("Password", text: $viewModel.password)
+                Button("Login") {
+                    print("Login button tapped")
+                }
+            }
+            .padding()
+        }
+        .navigationTitle("Auth")
     }
 }
