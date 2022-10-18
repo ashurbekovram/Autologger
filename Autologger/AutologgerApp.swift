@@ -11,7 +11,7 @@ import SwiftUI
 struct AutologgerApp: App {
     var body: some Scene {
         WindowGroup {
-            AppTabView()
+            AppViewFactory.shared.createTabView()
         }
     }
 }

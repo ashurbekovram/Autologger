@@ -12,6 +12,9 @@
 		3E164C77286F38BE006772F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C76286F38BE006772F9 /* Assets.xcassets */; };
 		3E164C7A286F38BE006772F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C79286F38BE006772F9 /* Preview Assets.xcassets */; };
 		3E445B1A286F57A2001F21A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E445B19286F57A2001F21A9 /* Colors.xcassets */; };
+		3E519A1528FF3BBE00A61139 /* AppTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1428FF3BBE00A61139 /* AppTabViewModel.swift */; };
+		3E519A1728FF3C6E00A61139 /* AppTabViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1628FF3C6E00A61139 /* AppTabViewFactory.swift */; };
+		3E519A1A28FF3E5D00A61139 /* AppTabInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1928FF3E5D00A61139 /* AppTabInputModel.swift */; };
 		3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */; };
 		3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */; };
 		3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */; };
@@ -54,6 +57,9 @@
 		3E369AA728985D6E009DA1C5 /* MakesService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MakesService; path = Packages/Services/MakesService; sourceTree = "<group>"; };
 		3E369AA828985D81009DA1C5 /* NetworkManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkManager; path = Packages/Managers/NetworkManager; sourceTree = "<group>"; };
 		3E445B19286F57A2001F21A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3E519A1428FF3BBE00A61139 /* AppTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewModel.swift; sourceTree = "<group>"; };
+		3E519A1628FF3C6E00A61139 /* AppTabViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewFactory.swift; sourceTree = "<group>"; };
+		3E519A1928FF3E5D00A61139 /* AppTabInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabInputModel.swift; sourceTree = "<group>"; };
 		3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutologgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
@@ -131,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				3E164C72286F38BD006772F9 /* AutologgerApp.swift */,
-				3E97432A287AFA9700612625 /* AppTabView.swift */,
 				3EC5386A287B51560037DA15 /* AppAssembler.swift */,
 				3E8EEB9228995AD30080597A /* AppViewFactory.swift */,
+				3E519A1828FF3DE300A61139 /* TabView */,
 				3E445B19286F57A2001F21A9 /* Colors.xcassets */,
 				3E164C76286F38BE006772F9 /* Assets.xcassets */,
 				3E164C78286F38BE006772F9 /* Preview Content */,
@@ -147,6 +153,17 @@
 				3E164C79286F38BE006772F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E519A1828FF3DE300A61139 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				3E519A1928FF3E5D00A61139 /* AppTabInputModel.swift */,
+				3E97432A287AFA9700612625 /* AppTabView.swift */,
+				3E519A1428FF3BBE00A61139 /* AppTabViewModel.swift */,
+				3E519A1628FF3C6E00A61139 /* AppTabViewFactory.swift */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 		3E75C2CD2895CCE100BB03C4 /* AutologgerTests */ = {
@@ -350,8 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */,
+				3E519A1528FF3BBE00A61139 /* AppTabViewModel.swift in Sources */,
 				3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */,
 				3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */,
+				3E519A1728FF3C6E00A61139 /* AppTabViewFactory.swift in Sources */,
+				3E519A1A28FF3E5D00A61139 /* AppTabInputModel.swift in Sources */,
 				3E97432B287AFA9700612625 /* AppTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

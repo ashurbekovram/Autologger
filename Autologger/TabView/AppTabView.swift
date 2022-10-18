@@ -9,6 +9,15 @@ import SwiftUI
 import ProfileService
 
 struct AppTabView: View {
+    @StateObject var viewModel: AppTabViewModel
+
+    init(inputModel: AppTabInputModel) {
+        _viewModel = StateObject(wrappedValue: AppTabViewModel(
+            profileService: inputModel.profileService,
+            appTabFactory: inputModel.viewFactory
+        ))
+    }
+
     var body: some View {
         TabView {
             NavigationView {
@@ -31,9 +40,9 @@ struct AppTabView: View {
     }
 }
 
-// MARK: - PreviewProvider
-struct AppTabView_Previews: PreviewProvider {
-	static var previews: some View {
-		AppTabView()
-	}
-}
+//// MARK: - PreviewProvider
+//struct AppTabView_Previews: PreviewProvider {
+//	static var previews: some View {
+//		AppTabView()
+//	}
+//}
