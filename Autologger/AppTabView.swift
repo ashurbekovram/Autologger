@@ -30,3 +30,10 @@ struct AppTabView: View {
         }
     }
 }
+
+// MARK: - PreviewProvider
+struct AppTabView_Previews: PreviewProvider {
+	static var previews: some View {
+		AppTabView()
+	}
+}
