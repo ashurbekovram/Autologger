@@ -8,10 +8,17 @@
 import SwiftUI
 import UIComponents
 
-struct ProfileView<ViewModel: ProfileViewModelProtocol>: View  {
-    @StateObject var viewModel: ViewModel
+public struct ProfileView: View  {
+    @StateObject var viewModel: ProfileViewModel
 
-    var body: some View {
+    public init(inputModel: ProfileInputModel) {
+        _viewModel = StateObject(wrappedValue: ProfileViewModel(
+            viewFactory: inputModel.viewFactory,
+            profileService: inputModel.profileService
+        ))
+    }
+
+    public var body: some View {
         ScrollView {
             if viewModel.isLoading {
                 ProgressView()

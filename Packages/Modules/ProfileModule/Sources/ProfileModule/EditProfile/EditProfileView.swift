@@ -7,11 +7,17 @@
 
 import SwiftUI
 
-struct EditProfileView<ViewModel: EditProfileViewModelProtocol>: View {
+public struct EditProfileView: View {
 //    @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel: ViewModel
+    @StateObject private var viewModel: EditProfileViewModel
 
-    var body: some View {
+    public init(inputModel: EditProfileInputModel) {
+        _viewModel = StateObject(wrappedValue: EditProfileViewModel(
+            profileService: inputModel.profileService
+        ))
+    }
+
+    public var body: some View {
         Form {
             Section {
                 TextField("Enter name", text: $viewModel.name)

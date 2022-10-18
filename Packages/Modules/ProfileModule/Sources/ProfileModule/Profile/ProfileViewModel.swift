@@ -16,18 +16,7 @@ struct ProfileState {
     var error: Error?
 }
 
-protocol ProfileViewModelProtocol: ObservableObject {
-    var viewFactory: ProfileViewFactory? { get }
-
-    var isLoading: Bool { get }
-    var profile: Profile? { get }
-    var error: Error? { get }
-
-    func onAppear()
-    func fetchProfile()
-}
-
-final class ProfileViewModel: ProfileViewModelProtocol {
+final class ProfileViewModel: ObservableObject {
     private(set) weak var viewFactory: ProfileViewFactory?
 
     @Published private(set) var isLoading: Bool = true

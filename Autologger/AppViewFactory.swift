@@ -29,7 +29,7 @@ final class AppViewFactory {
             profileService: AppAssembler.profileService,
             viewFactory: self
         )
-        return ProfileAssembler.assembleModule(with: inputModel)
+        return AnyView(ProfileView(inputModel: inputModel))
     }
 }
 
@@ -45,7 +45,9 @@ extension AppViewFactory: MainViewFactory {
 
 extension AppViewFactory: ProfileViewFactory {
     func createEditProfileView() -> AnyView {
-        let inputModel = EditProfileInputModel(profileService: AppAssembler.profileService)
-        return EditProfileAssembler.assembleModule(with: inputModel)
+        let inputModel = EditProfileInputModel(
+            profileService: AppAssembler.profileService
+        )
+        return AnyView(EditProfileView(inputModel: inputModel))
     }
 }

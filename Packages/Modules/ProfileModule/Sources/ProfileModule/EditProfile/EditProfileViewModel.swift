@@ -10,18 +10,7 @@ import Foundation
 import Models
 import ProfileServiceInterface
 
-protocol EditProfileViewModelProtocol: ObservableObject {
-    var isLoading: Bool { get }
-    var isSuccessUpdating: Bool { get }
-    var error: String? { get }
-
-    var name: String { get set }
-    var secondName: String { get set }
-
-    func updateProfile()
-}
-
-final class EditProfileViewModel: EditProfileViewModelProtocol {
+final class EditProfileViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var isSuccessUpdating: Bool = false
     @Published private(set) var error: String?
