@@ -5,6 +5,7 @@
 //  Created by Ramazan Ashurbekov on 02.08.2022.
 //
 
+import AuthModule
 import EditAutoModule
 import MainModule
 import ProfileModule
@@ -40,6 +41,10 @@ extension AppViewFactory: AppTabViewFactory {
             profileService: AppAssembler.profileService
         )
         return AnyView(ProfileView(inputModel: inputModel))
+    }
+
+    func createAuthView() -> AnyView {
+        return AnyView(AuthView())
     }
 }
 

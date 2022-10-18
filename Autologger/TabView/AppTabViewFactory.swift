@@ -10,4 +10,5 @@ import SwiftUI
 protocol AppTabViewFactory {
     func createMainView() -> AnyView
     func createProfileView() -> AnyView
+    func createAuthView() -> AnyView
 }

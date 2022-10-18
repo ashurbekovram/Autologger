@@ -15,6 +15,7 @@
 		3E519A1528FF3BBE00A61139 /* AppTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1428FF3BBE00A61139 /* AppTabViewModel.swift */; };
 		3E519A1728FF3C6E00A61139 /* AppTabViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1628FF3C6E00A61139 /* AppTabViewFactory.swift */; };
 		3E519A1A28FF3E5D00A61139 /* AppTabInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1928FF3E5D00A61139 /* AppTabInputModel.swift */; };
+		3E519A1E28FF450E00A61139 /* AuthModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E519A1D28FF450E00A61139 /* AuthModule */; };
 		3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */; };
 		3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */; };
 		3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */; };
@@ -60,6 +61,7 @@
 		3E519A1428FF3BBE00A61139 /* AppTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewModel.swift; sourceTree = "<group>"; };
 		3E519A1628FF3C6E00A61139 /* AppTabViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewFactory.swift; sourceTree = "<group>"; };
 		3E519A1928FF3E5D00A61139 /* AppTabInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabInputModel.swift; sourceTree = "<group>"; };
+		3E519A1C28FF444A00A61139 /* AuthModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AuthModule; path = Packages/Modules/AuthModule; sourceTree = "<group>"; };
 		3E75C2CC2895CCE100BB03C4 /* AutologgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutologgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E75C2CE2895CCE100BB03C4 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		3E75C2D92895EA5D00BB03C4 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				3E7A6F2C289A834200F7C80C /* Extensions in Frameworks */,
 				3E7A6F36289A835B00F7C80C /* ProfileService in Frameworks */,
 				3EE81CB8289A889A00FF9F8F /* ProfileServiceInterface in Frameworks */,
+				3E519A1E28FF450E00A61139 /* AuthModule in Frameworks */,
 				3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */,
 				3E7A6F42289A871000F7C80C /* MakesServiceInterface in Frameworks */,
 				3E7A6F3C289A837900F7C80C /* MainModule in Frameworks */,
@@ -233,6 +236,7 @@
 		3EF14906289A7E1800CAA439 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3E519A1C28FF444A00A61139 /* AuthModule */,
 				3E79D14A289A75A900EEE971 /* EditAutoModule */,
 				3E79D146289A74BB00EEE971 /* MainModule */,
 				3E84DA99289A763200F75932 /* ProfileModule */,
@@ -277,6 +281,7 @@
 				3E7A6F3F289A838000F7C80C /* EditAutoModule */,
 				3E7A6F41289A871000F7C80C /* MakesServiceInterface */,
 				3EE81CB7289A889A00FF9F8F /* ProfileServiceInterface */,
+				3E519A1D28FF450E00A61139 /* AuthModule */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -645,6 +650,10 @@
 		3E099F1C289861D00014A07C /* TestExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TestExtensions;
+		};
+		3E519A1D28FF450E00A61139 /* AuthModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthModule;
 		};
 		3E7A6F2B289A834200F7C80C /* Extensions */ = {
 			isa = XCSwiftPackageProductDependency;
