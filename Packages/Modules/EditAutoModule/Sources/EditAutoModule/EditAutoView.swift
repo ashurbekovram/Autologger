@@ -42,58 +42,52 @@ public struct EditAutoView: View {
                                 viewModel.fetchMakes()
                             }
                         } else {
-                            Group {
-                                Button {
-                                    withAnimation {
-                                        showMakePicker.toggle()
-                                    }
-                                } label: {
-                                    HStack {
-                                        Text("Make")
-                                            .foregroundColor(Color("TextPrimary"))
-                                        Spacer()
-                                        Text(viewModel.selectedMake?.name ?? "None")
-                                    }
+                            Button {
+                                withAnimation {
+                                    showMakePicker.toggle()
                                 }
-                                if showMakePicker {
-                                    Picker("Select make", selection: $viewModel.selectedMake) {
-                                        Text("No make").tag(nil as Make?)
-                                        ForEach(viewModel.makes) { make in
-                                            Text(make.name).tag(make as Make?)
-                                        }
-                                    }
-                                    .pickerStyle(.wheel)
+                            } label: {
+                                HStack {
+                                    Text("Make")
+                                        .foregroundColor(Color("TextPrimary"))
+                                    Spacer()
+                                    Text(viewModel.selectedMake?.name ?? "None")
                                 }
-                                Divider()
                             }
-                            Group {
-                                Button {
-                                    withAnimation {
-                                        showYearPicker.toggle()
-                                    }
-                                } label: {
-                                    HStack {
-                                        Text("Year")
-                                            .foregroundColor(Color("TextPrimary"))
-                                        Spacer()
-                                        Text(viewModel.selectedYear.description)
+                            if showMakePicker {
+                                Picker("Select make", selection: $viewModel.selectedMake) {
+                                    Text("No make").tag(nil as Make?)
+                                    ForEach(viewModel.makes) { make in
+                                        Text(make.name).tag(make as Make?)
                                     }
                                 }
-                                if showYearPicker {
-                                    Picker("Select year", selection: $viewModel.selectedYear) {
-                                        ForEach(viewModel.years, id: \.self) { year in
-                                            Text(year.description)
-                                        }
-                                    }
-                                    .pickerStyle(.wheel)
+                                .pickerStyle(.wheel)
+                            }
+                            Divider()
+                            Button {
+                                withAnimation {
+                                    showYearPicker.toggle()
                                 }
-                                Divider()
+                            } label: {
+                                HStack {
+                                    Text("Year")
+                                        .foregroundColor(Color("TextPrimary"))
+                                    Spacer()
+                                    Text(viewModel.selectedYear.description)
+                                }
                             }
-                            Group {
-                                TextField("Enter Model", text: $viewModel.model)
-                                Divider()
-                                TextField("Enter VIN", text: $viewModel.vin)
+                            if showYearPicker {
+                                Picker("Select year", selection: $viewModel.selectedYear) {
+                                    ForEach(viewModel.years, id: \.self) { year in
+                                        Text(year.description)
+                                    }
+                                }
+                                .pickerStyle(.wheel)
                             }
+                            Divider()
+                            TextField("Enter Model", text: $viewModel.model)
+                            Divider()
+                            TextField("Enter VIN", text: $viewModel.vin)
                         }
                     }
                     .padding()
