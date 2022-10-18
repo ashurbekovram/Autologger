@@ -75,7 +75,7 @@ public struct MainView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    viewModel.viewFactory?.createEditAutoView() ?? AnyView(EmptyView())
+                    viewModel.viewFactory.createEditAutoView()
                 } label: {
                     Image(systemName: "plus")
                 }

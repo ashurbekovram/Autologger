@@ -9,14 +9,14 @@ import ProfileServiceInterface
 import SwiftUI
 
 public struct ProfileInputModel {
+    let viewFactory: ProfileViewFactory
     let profileService: ProfileService
-    weak var viewFactory: ProfileViewFactory?
 
     public init(
-        profileService: ProfileService,
-        viewFactory: ProfileViewFactory?
+        viewFactory: ProfileViewFactory,
+        profileService: ProfileService
     ) {
-        self.profileService = profileService
         self.viewFactory = viewFactory
+        self.profileService = profileService
     }
 }

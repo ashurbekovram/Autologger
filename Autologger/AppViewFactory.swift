@@ -17,8 +17,8 @@ final class AppViewFactory {
 
     func createTabView() -> AnyView {
         let inputModel = AppTabInputModel(
-            profileService: AppAssembler.profileService,
-            viewFactory: self
+            viewFactory: self,
+            profileService: AppAssembler.profileService
         )
         return AnyView(AppTabView(inputModel: inputModel))
     }
@@ -27,17 +27,17 @@ final class AppViewFactory {
 extension AppViewFactory: AppTabViewFactory {
     func createMainView() -> AnyView {
         let inputModel = MainInputModel(
+            viewFactory: self,
             profileService: AppAssembler.profileService,
-            userAutosService: AppAssembler.userAutosService,
-            viewFactory: self
+            userAutosService: AppAssembler.userAutosService
         )
         return AnyView(MainView(inputModel: inputModel))
     }
 
     func createProfileView() -> AnyView {
         let inputModel = ProfileInputModel(
-            profileService: AppAssembler.profileService,
-            viewFactory: self
+            viewFactory: self,
+            profileService: AppAssembler.profileService
         )
         return AnyView(ProfileView(inputModel: inputModel))
     }

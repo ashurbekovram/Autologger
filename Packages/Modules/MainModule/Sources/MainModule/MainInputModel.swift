@@ -10,17 +10,17 @@ import SwiftUI
 import UserAutosService
 
 public struct MainInputModel {
+    let viewFactory: MainViewFactory
     let profileService: ProfileService
     let userAutosService: UserAutosService
-    weak var viewFactory: MainViewFactory?
 
     public init(
+        viewFactory: MainViewFactory,
         profileService: ProfileService,
-        userAutosService: UserAutosService,
-        viewFactory: MainViewFactory?
+        userAutosService: UserAutosService
     ) {
+        self.viewFactory = viewFactory
         self.profileService = profileService
         self.userAutosService = userAutosService
-        self.viewFactory = viewFactory
     }
 }

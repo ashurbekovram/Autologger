@@ -17,17 +17,17 @@ struct ProfileState {
 }
 
 final class ProfileViewModel: ObservableObject {
-    private(set) weak var viewFactory: ProfileViewFactory?
-
     @Published private(set) var isLoading: Bool = true
     @Published private(set) var profile: Profile?
     @Published private(set) var error: Error?
+
+    let viewFactory: ProfileViewFactory
 
     private let profileService: ProfileService
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
-        viewFactory: ProfileViewFactory?,
+        viewFactory: ProfileViewFactory,
         profileService: ProfileService
     ) {
         self.viewFactory = viewFactory

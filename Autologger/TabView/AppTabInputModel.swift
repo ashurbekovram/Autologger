@@ -8,6 +8,6 @@
 import ProfileServiceInterface
 
 struct AppTabInputModel {
-    let profileService: ProfileService
     let viewFactory: AppTabViewFactory
+    let profileService: ProfileService
 }

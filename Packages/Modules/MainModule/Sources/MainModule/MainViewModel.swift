@@ -20,7 +20,7 @@ final class MainViewModel: ObservableObject {
     @Published private(set) var profile: Profile?
     @Published private(set) var autos: [Auto] = []
 
-    private(set) weak var viewFactory: MainViewFactory?
+    let viewFactory: MainViewFactory
 
     private let profileService: ProfileService
     private let userAutosService: UserAutosService
@@ -29,7 +29,7 @@ final class MainViewModel: ObservableObject {
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
-        viewFactory: MainViewFactory?,
+        viewFactory: MainViewFactory,
         profileService: ProfileService,
         userAutosService: UserAutosService
     ) {
