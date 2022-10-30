@@ -46,10 +46,10 @@ struct AppTabView: View {
 
 // MARK: - PreviewProvider
 struct AppTabView_Previews: PreviewProvider {
-	static var previews: some View {
-		AppTabView(inputModel: AppTabInputModel(
-			viewFactory: AppViewFactory.shared,
-			profileService: AppAssembler.profileService
-		))
-	}
+    static var previews: some View {
+        AppTabView(inputModel: AppTabInputModel(
+            viewFactory: AppViewFactory.shared,
+            profileService: AppAssembler.profileService
+        ))
+    }
 }
