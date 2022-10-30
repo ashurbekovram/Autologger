@@ -28,3 +28,10 @@ public struct AuthView: View {
         .navigationTitle("Auth")
     }
 }
+
+// MARK: - PreviewProvider
+struct AuthView_Previews: PreviewProvider {
+	static var previews: some View {
+		AuthView()
+	}
+}
