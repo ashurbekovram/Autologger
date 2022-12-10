@@ -20,14 +20,11 @@ public protocol HTTPRequest {
 
 public extension HTTPRequest {
     var baseURL: String {
-        "https://car-database.p.rapidapi.com"
+        "https://ashurbekovram.pythonanywhere.com"
     }
 
     var headers: [String: String] {
-        [
-            "X-RapidAPI-Key": "73a7994d00msh9360da29c32f6fdp16f551jsn19ac5e174a2d",
-            "X-RapidAPI-Host": "car-database.p.rapidapi.com"
-        ]
+        [:]
     }
 
     var timeout: TimeInterval {
