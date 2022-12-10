@@ -15,6 +15,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(name: "Extensions", path: "../Common/Extensions"),
         .package(name: "Models", path: "../Common/Models"),
         .package(name: "ProfileService", path: "../Services/ProfileService"),
         .package(name: "UIComponents", path: "../Common/UIComponents"),

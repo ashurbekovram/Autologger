@@ -8,7 +8,6 @@
 import Combine
 import SwiftUI
 import Models
-import NetworkManager
 
 public struct EditAutoView: View {
     @StateObject private var viewModel: EditAutoViewModel
