@@ -15,7 +15,7 @@ public struct EditAutoView: View {
 
     public init(inputModel: EditAutoInputModel) {
         _viewModel = StateObject(wrappedValue: EditAutoViewModel(
-            makesService: inputModel.makesService,
+            vehiclesService: inputModel.vehiclesService,
             userAutosService: inputModel.userAutosService
         ))
     }
@@ -51,14 +51,14 @@ public struct EditAutoView: View {
                                     Text("Make")
                                         .foregroundColor(Color("TextPrimary"))
                                     Spacer()
-                                    Text(viewModel.selectedMake?.name ?? "None")
+                                    Text(viewModel.selectedBrand?.name ?? "None")
                                 }
                             }
                             if showMakePicker {
-                                Picker("Select make", selection: $viewModel.selectedMake) {
-                                    Text("No make").tag(nil as Make?)
-                                    ForEach(viewModel.makes) { make in
-                                        Text(make.name).tag(make as Make?)
+                                Picker("Select brand", selection: $viewModel.selectedBrand) {
+                                    Text("No brand").tag(nil as VehicleBrand?)
+                                    ForEach(viewModel.brands) { brand in
+                                        Text(brand.name).tag(brand as VehicleBrand?)
                                     }
                                 }
                                 .pickerStyle(.wheel)

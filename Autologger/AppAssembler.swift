@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import MakesService
-import MakesServiceInterface
+import VehiclesService
+import VehiclesServiceInterface
 import NetworkManager
 import NetworkManagerInterface
 import ProfileService
@@ -16,7 +16,7 @@ import SwiftUI
 import UserAutosService
 
 final class AppAssembler {
-    public static var makesService: MakesService = MakesServiceNetwork(networkManager: networkManager)
+    public static var vehiclesService: VehiclesServiceProtocol = VehiclesService(networkManager: networkManager)
     public static var networkManager: NetworkManager = NetworkManagerImpl()
     public static var profileService: ProfileService = ProfileServiceLocal()
     public static var userAutosService: UserAutosService = UserAutosServiceLocal()

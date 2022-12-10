@@ -1,11 +1,11 @@
 //
-//  Make.swift
+//  VehicleBrand.swift
 //  Autologger
 //
 //  Created by Ramazan Ashurbekov on 02.07.2022.
 //
 
-public struct Make: Decodable, Hashable, Identifiable {
+public struct VehicleBrand: Decodable, Hashable, Identifiable {
     public let id: Int
     public let name: String
     public let description: String

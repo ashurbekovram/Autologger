@@ -6,18 +6,18 @@
 //
 
 import SwiftUI
-import MakesServiceInterface
+import VehiclesServiceInterface
 import UserAutosService
 
 public struct EditAutoInputModel {
-    let makesService: MakesService
+    let vehiclesService: VehiclesServiceProtocol
     let userAutosService: UserAutosService
 
     public init(
-        makesService: MakesService,
+        vehiclesService: VehiclesServiceProtocol,
         userAutosService: UserAutosService
     ) {
-        self.makesService = makesService
+        self.vehiclesService = vehiclesService
         self.userAutosService = userAutosService
     }
 }

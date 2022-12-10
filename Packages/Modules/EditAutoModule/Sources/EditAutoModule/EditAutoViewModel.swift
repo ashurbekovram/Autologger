@@ -7,30 +7,30 @@
 
 import Combine
 import Foundation
-import MakesServiceInterface
+import VehiclesServiceInterface
 import Models
 import UserAutosService
 
 final class EditAutoViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = true
     @Published private(set) var error: Error?
-    @Published private(set) var makes: [Make] = []
+    @Published private(set) var brands: [VehicleBrand] = []
     let years: [Int] = (1970...2022).map { $0 }
 
-    @Published var selectedMake: Make?
+    @Published var selectedBrand: VehicleBrand?
     @Published var selectedYear: Int = 2000
     @Published var model: String = ""
     @Published var vin: String = ""
 
-    private let makesService: MakesService
+    private let vehiclesService: VehiclesServiceProtocol
     private let userAutosService: UserAutosService
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
-        makesService: MakesService,
+        vehiclesService: VehiclesServiceProtocol,
         userAutosService: UserAutosService
     ) {
-        self.makesService = makesService
+        self.vehiclesService = vehiclesService
         self.userAutosService = userAutosService
         print("\(type(of: self)) init")
     }
@@ -41,7 +41,7 @@ final class EditAutoViewModel: ObservableObject {
 
     func fetchMakes() {
         isLoading = true
-        makesService.fetchAllMakes()
+        vehiclesService.fetchAllBrands()
             .sink { [weak self] completion in
                 self?.isLoading = false
                 switch completion {
@@ -50,20 +50,18 @@ final class EditAutoViewModel: ObservableObject {
                 case .finished:
                     break
                 }
-            } receiveValue: { [weak self] makes in
+            } receiveValue: { [weak self] brands in
                 self?.isLoading = false
-                self?.makes = makes
+                self?.brands = brands
             }
             .store(in: &cancellableSet)
     }
 
     func save() {
-        guard let selectedMake = selectedMake else {
-            return
-        }
+        guard let selectedBrand else { return }
 
         let auto = Auto(
-            brand: selectedMake.name,
+            brand: selectedBrand.name,
             model: model,
             year: selectedYear,
             vin: vin

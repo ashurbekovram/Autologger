@@ -1,24 +1,24 @@
 //
-//  MakesServiceNetwork.swift
+//  VehiclesService.swift
 //  
 //
 //  Created by Ramazan Ashurbekov on 09.07.2022.
 //
 
 import Combine
-import MakesServiceInterface
+import VehiclesServiceInterface
 import Models
 import NetworkManagerInterface
 
-public final class MakesServiceNetwork: MakesService{
+public final class VehiclesService: VehiclesServiceProtocol {
     private let networkManager: NetworkManager
 
     public init(networkManager: NetworkManager) {
         self.networkManager = networkManager
     }
 
-    public func fetchAllMakes() -> AnyPublisher<[Make], Error> {
-        let request = MakesRequest()
+    public func fetchAllBrands() -> AnyPublisher<[VehicleBrand], Error> {
+        let request = VehicleBrandsRequest()
         return networkManager.send(request: request)
     }
 }

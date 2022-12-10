@@ -51,7 +51,7 @@ extension AppViewFactory: AppTabViewFactory {
 extension AppViewFactory: MainViewFactory {
     func createEditAutoView() -> AnyView {
         let inputModel = EditAutoInputModel(
-            makesService: AppAssembler.makesService,
+            vehiclesService: AppAssembler.vehiclesService,
             userAutosService: AppAssembler.userAutosService
         )
         return AnyView(EditAutoView(inputModel: inputModel))

@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Models", path: "../Common/Models"),
-        .package(name: "MakesService", path: "../Services/MakesService"),
+        .package(name: "VehiclesService", path: "../Services/VehiclesService"),
         .package(name: "UIComponents", path: "../Common/UIComponents"),
         .package(name: "UserAutosService", path: "../Services/UserAutosService"),
     ],
@@ -25,7 +25,7 @@ let package = Package(
             name: "EditAutoModule",
             dependencies: [
                 .product(name: "Models", package: "Models"),
-                .product(name: "MakesServiceInterface", package: "MakesService"),
+                .product(name: "VehiclesServiceInterface", package: "VehiclesService"),
                 .product(name: "UserAutosService", package: "UserAutosService"),
                 .product(name: "UIComponents", package: "UIComponents"),
             ]

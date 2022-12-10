@@ -1,5 +1,5 @@
 //
-//  MakesServiceMock.swift
+//  VehiclesServiceMock.swift
 //  AutologgerTests
 //
 //  Created by Ramazan Ashurbekov on 31.07.2022.
@@ -7,13 +7,13 @@
 
 import Combine
 import Models
-import MakesServiceInterface
+import VehiclesServiceInterface
 
-final class MakesServiceMock: MakesService {
-    var makes: CurrentValueSubject<[Make], Never> = .init([])
+final class VehiclesServiceMock: VehiclesServiceProtocol {
+    var brands: CurrentValueSubject<[VehicleBrand], Never> = .init([])
 
-    func fetchAllMakes() -> AnyPublisher<[Make], Error> {
-        makes
+    func fetchAllBrands() -> AnyPublisher<[VehicleBrand], Error> {
+        brands
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }
