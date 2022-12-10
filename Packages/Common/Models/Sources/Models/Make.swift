@@ -13,11 +13,11 @@ public struct Make: Decodable, Hashable, Identifiable {
     public let country: Country
     public let series: [Series]
 
-    enum CodingKeys: CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
         case name
         case description
-        case foundingDate
+        case foundingDate = "founding_date"
         case country
         case series
     }
