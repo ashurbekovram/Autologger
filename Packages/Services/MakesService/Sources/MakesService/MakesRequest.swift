@@ -12,7 +12,7 @@ struct MakesRequest: HTTPRequest {
     typealias Response = [Make]
 
     var path: String {
-        "/makes"
+        "/brands"
     }
 
     var parameters: [String : String] {
