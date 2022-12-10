@@ -22,12 +22,12 @@ final class EditAutoViewModel: ObservableObject {
     @Published var model: String = ""
     @Published var vin: String = ""
 
-    private let vehiclesService: VehiclesServiceProtocol
+    private let vehiclesService: VehiclesService
     private let userAutosService: UserAutosService
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
-        vehiclesService: VehiclesServiceProtocol,
+        vehiclesService: VehiclesService,
         userAutosService: UserAutosService
     ) {
         self.vehiclesService = vehiclesService

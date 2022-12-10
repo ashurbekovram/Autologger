@@ -10,11 +10,11 @@ import VehiclesServiceInterface
 import UserAutosService
 
 public struct EditAutoInputModel {
-    let vehiclesService: VehiclesServiceProtocol
+    let vehiclesService: VehiclesService
     let userAutosService: UserAutosService
 
     public init(
-        vehiclesService: VehiclesServiceProtocol,
+        vehiclesService: VehiclesService,
         userAutosService: UserAutosService
     ) {
         self.vehiclesService = vehiclesService

@@ -13,6 +13,7 @@ import XCTest
 @testable import MainModule
 
 final class MainViewModelTests: XCTestCase {
+    private var mainViewFactory: MainViewFactory!
     private var profileService: ProfileServiceMock!
     private var userAutosService: UserAutosServiceMock!
     private var mainViewModel: MainViewModel!
@@ -21,10 +22,11 @@ final class MainViewModelTests: XCTestCase {
 
     // Запускается перед каждым тестом
     override func setUpWithError() throws {
+        mainViewFactory = MainViewFactoryMock()
         profileService = ProfileServiceMock()
         userAutosService = UserAutosServiceMock()
         mainViewModel = MainViewModel(
-            viewFactory: nil,
+            viewFactory: mainViewFactory,
             profileService: profileService,
             userAutosService: userAutosService
         )

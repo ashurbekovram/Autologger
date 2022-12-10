@@ -9,7 +9,7 @@ import Combine
 import Models
 import VehiclesServiceInterface
 
-final class VehiclesServiceMock: VehiclesServiceProtocol {
+final class VehiclesServiceMock: VehiclesService {
     var brands: CurrentValueSubject<[VehicleBrand], Never> = .init([])
 
     func fetchAllBrands() -> AnyPublisher<[VehicleBrand], Error> {

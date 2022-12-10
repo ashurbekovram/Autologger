@@ -10,7 +10,7 @@ import VehiclesServiceInterface
 import Models
 import NetworkManagerInterface
 
-public final class VehiclesService: VehiclesServiceProtocol {
+public final class VehiclesServiceImp: VehiclesService {
     private let networkManager: NetworkManager
 
     public init(networkManager: NetworkManager) {

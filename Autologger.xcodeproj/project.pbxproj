@@ -11,6 +11,7 @@
 		3E164C73286F38BD006772F9 /* AutologgerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E164C72286F38BD006772F9 /* AutologgerApp.swift */; };
 		3E164C77286F38BE006772F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C76286F38BE006772F9 /* Assets.xcassets */; };
 		3E164C7A286F38BE006772F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E164C79286F38BE006772F9 /* Preview Assets.xcassets */; };
+		3E353B332944DB7400E03A23 /* MainViewFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E353B322944DB7400E03A23 /* MainViewFactoryMock.swift */; };
 		3E445B1A286F57A2001F21A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E445B19286F57A2001F21A9 /* Colors.xcassets */; };
 		3E519A1528FF3BBE00A61139 /* AppTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1428FF3BBE00A61139 /* AppTabViewModel.swift */; };
 		3E519A1728FF3C6E00A61139 /* AppTabViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E519A1628FF3C6E00A61139 /* AppTabViewFactory.swift */; };
@@ -55,6 +56,7 @@
 		3E164C72286F38BD006772F9 /* AutologgerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutologgerApp.swift; sourceTree = "<group>"; };
 		3E164C76286F38BE006772F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E164C79286F38BE006772F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E353B322944DB7400E03A23 /* MainViewFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewFactoryMock.swift; sourceTree = "<group>"; };
 		3E369AA828985D81009DA1C5 /* NetworkManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkManager; path = Packages/Managers/NetworkManager; sourceTree = "<group>"; };
 		3E445B19286F57A2001F21A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3E519A1428FF3BBE00A61139 /* AppTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewModel.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3E353B312944DB6600E03A23 /* ViewFactories */ = {
+			isa = PBXGroup;
+			children = (
+				3E353B322944DB7400E03A23 /* MainViewFactoryMock.swift */,
+			);
+			path = ViewFactories;
+			sourceTree = "<group>";
+		};
 		3E519A1828FF3DE300A61139 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		3E75C2CD2895CCE100BB03C4 /* AutologgerTests */ = {
 			isa = PBXGroup;
 			children = (
+				3E353B312944DB6600E03A23 /* ViewFactories */,
 				3E75C2E32895F8EC00BB03C4 /* EditAuto */,
 				3E75C2DF2895EB3F00BB03C4 /* MainViewModel */,
 				3E75C2E02895EB4900BB03C4 /* Services */,
@@ -389,6 +400,7 @@
 				3E75C2E52895FA1400BB03C4 /* MakesServiceMock.swift in Sources */,
 				3E75C2CF2895CCE100BB03C4 /* MainViewModelTests.swift in Sources */,
 				3E75C2DC2895EAB400BB03C4 /* UserAutosServiceMock.swift in Sources */,
+				3E353B332944DB7400E03A23 /* MainViewFactoryMock.swift in Sources */,
 				3E75C2DA2895EA5D00BB03C4 /* ProfileServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
