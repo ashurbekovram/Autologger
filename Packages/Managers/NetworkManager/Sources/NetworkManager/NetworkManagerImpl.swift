@@ -17,7 +17,7 @@ public final class NetworkManagerImpl: NetworkManager {
             return Fail(error: URLError(.unsupportedURL)).eraseToAnyPublisher()
         }
 
-        return URLSession.shared.dataTaskPublisher(for: urlRequest)         
+        return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { data, response in
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw URLError(.badServerResponse)
@@ -25,6 +25,7 @@ public final class NetworkManagerImpl: NetworkManager {
 
                 switch httpResponse.statusCode {
                 case 200...299:
+                    debugPrint(data.prettyPrintedJSONString ?? URLError.cannotDecodeRawData)
                     return data
                 default:
                     throw URLError(.dataNotAllowed)
@@ -57,3 +58,17 @@ public final class NetworkManagerImpl: NetworkManager {
 // В error возвращаются клиентские ошибки (нет доступа к нету или ошибка декода)
 // поэтому в идеале тут использовать не map, а tryMap и выбрасывать ошибки в throws
 // и обрабатывать statusCode у ответа - response as? HTTPURLResponse)?.statusCode
+
+
+fileprivate extension Data {
+    var prettyPrintedJSONString: NSString? {
+        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
+              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+              let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+        else {
+            return nil
+        }
+
+        return prettyPrintedString
+    }
+}
