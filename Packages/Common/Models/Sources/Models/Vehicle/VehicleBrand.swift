@@ -11,7 +11,7 @@ public struct VehicleBrand: Decodable, Hashable, Identifiable {
     public let description: String
     public let foundingDate: String
     public let country: Country
-    public let series: [Series]
+    public let series: [VehicleSeries]
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -29,7 +29,7 @@ public struct VehicleBrand: Decodable, Hashable, Identifiable {
         self.description = try container.decode(String.self, forKey: .description)
         self.foundingDate = try container.decode(String.self, forKey: .foundingDate)
         self.country = try container.decode(Country.self, forKey: .country)
-        self.series = try container.decode([Series].self, forKey: .series)
+        self.series = try container.decode([VehicleSeries].self, forKey: .series)
     }
 
     public init(
@@ -38,7 +38,7 @@ public struct VehicleBrand: Decodable, Hashable, Identifiable {
         description: String,
         foundingDate: String,
         country: Country,
-        series: [Series]
+        series: [VehicleSeries]
     ) {
         self.id = id
         self.name = name
@@ -46,34 +46,5 @@ public struct VehicleBrand: Decodable, Hashable, Identifiable {
         self.foundingDate = foundingDate
         self.country = country
         self.series = series
-    }
-}
-
-
-public struct Series: Decodable, Hashable {
-    let id: Int
-    let name: String
-    let generations: [Generation]
-}
-
-public struct Generation: Decodable, Hashable {
-    let id: Int
-    let name: String
-    let startYear: Int
-    let endYear: Int
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case startYear = "start_year"
-        case endYear = "end_year"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.startYear = try container.decode(Int.self, forKey: .startYear)
-        self.endYear = try container.decode(Int.self, forKey: .endYear)
     }
 }
