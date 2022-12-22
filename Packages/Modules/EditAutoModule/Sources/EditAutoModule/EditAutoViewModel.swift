@@ -21,7 +21,6 @@ final class EditAutoViewModel: ObservableObject {
     @Published var selectedGeneration: VehicleGeneration?
     @Published var selectedYear: Int?
 
-    @Published var model: String = ""
     @Published var vin: String = ""
 
     // MARK: - Private properties
@@ -67,6 +66,8 @@ final class EditAutoViewModel: ObservableObject {
 
     func save() {
         guard let selectedBrand,
+              let selectedSeries,
+              let selectedGeneration,
               let selectedYear
         else {
             return
@@ -74,7 +75,7 @@ final class EditAutoViewModel: ObservableObject {
 
         let auto = Auto(
             brand: selectedBrand.name,
-            model: model,
+            model: selectedSeries.name + " " + selectedGeneration.name,
             year: selectedYear,
             vin: vin
         )
