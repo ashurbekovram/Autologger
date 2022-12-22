@@ -44,7 +44,7 @@ final class EditAutoViewModelTests: XCTestCase {
         ]
         vehiclesService.brands.send(stubBrands)
 
-        editAutoViewModel.fetchMakes()
+        editAutoViewModel.fetchBrands()
 
         let brands = try awaitPublisher(editAutoViewModel.$brands)
         XCTAssertEqual(brands, stubBrands)

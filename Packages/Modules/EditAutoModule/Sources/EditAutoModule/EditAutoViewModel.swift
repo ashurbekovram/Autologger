@@ -15,16 +15,22 @@ final class EditAutoViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = true
     @Published private(set) var error: Error?
     @Published private(set) var brands: [VehicleBrand] = []
-    let years: [Int] = (1970...2022).map { $0 }
 
     @Published var selectedBrand: VehicleBrand?
-    @Published var selectedYear: Int = 2000
+    @Published var selectedSeries: VehicleSeries?
+    @Published var selectedGeneration: VehicleGeneration?
+    @Published var selectedYear: Int?
+
     @Published var model: String = ""
     @Published var vin: String = ""
+
+    // MARK: - Private properties
 
     private let vehiclesService: VehiclesService
     private let userAutosService: UserAutosService
     private var cancellableSet = Set<AnyCancellable>()
+
+    // MARK: - Init
 
     init(
         vehiclesService: VehiclesService,
@@ -39,7 +45,9 @@ final class EditAutoViewModel: ObservableObject {
         print("\(type(of: self)) deinit")
     }
 
-    func fetchMakes() {
+    // MARK: - Internal methods
+
+    func fetchBrands() {
         isLoading = true
         vehiclesService.fetchAllBrands()
             .sink { [weak self] completion in
@@ -58,7 +66,11 @@ final class EditAutoViewModel: ObservableObject {
     }
 
     func save() {
-        guard let selectedBrand else { return }
+        guard let selectedBrand,
+              let selectedYear
+        else {
+            return
+        }
 
         let auto = Auto(
             brand: selectedBrand.name,
