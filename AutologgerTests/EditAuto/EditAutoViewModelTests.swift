@@ -51,26 +51,25 @@ final class EditAutoViewModelTests: XCTestCase {
     }
 
     func testSave() throws {
-        let germany = Country(id: 1, name: "Germany")
-        let stubSelectedBrand = VehicleBrand(id: 1, name: "Audi", description: "", foundingDate: "1900", country: germany, series: [])
-        let stubModel = "RS7"
-        let stubSelectedYear = 2017
+        let stubYear = 2005
+        let stubGeneration = VehicleGeneration(id: 1, name: "E60", startYear: 2003, endYear: 2010)
+        let stubSeries = VehicleSeries(id: 1, name: "5 Series ", generations: [stubGeneration])
+        let stubCountry = Country(id: 1, name: "Germany")
+        let stubBrand = VehicleBrand(id: 1, name: "BMW", description: "", foundingDate: "1900", country: stubCountry, series: [stubSeries])
         let stubVIN = "AAAAAAAAAAAA"
-        let stubAuto = Auto(
-            brand: stubSelectedBrand.name,
-            model: stubModel,
-            year: stubSelectedYear,
-            vin: stubVIN
-        )
 
-        editAutoViewModel.selectedBrand = stubSelectedBrand
-        editAutoViewModel.model = stubModel
-        editAutoViewModel.selectedYear = stubSelectedYear
+        editAutoViewModel.selectedBrand = stubBrand
+        editAutoViewModel.selectedSeries = stubSeries
+        editAutoViewModel.selectedGeneration = stubGeneration
+        editAutoViewModel.selectedYear = stubYear
         editAutoViewModel.vin = stubVIN
 
         editAutoViewModel.save()
 
         let autos = try awaitPublisher(userAutosService.userAutos)
-        XCTAssertEqual(autos.last, stubAuto)
+        XCTAssertEqual(autos.last?.brand, stubBrand.name)
+        XCTAssertEqual(autos.last?.model, stubSeries.name + " " + stubGeneration.name)
+        XCTAssertEqual(autos.last?.year, stubYear)
+        XCTAssertEqual(autos.last?.vin, stubVIN)
     }
 }
