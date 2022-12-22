@@ -8,9 +8,7 @@
 import SwiftUI
 
 public struct Auto: Identifiable, Codable, Equatable {
-    public var id: String {
-        vin
-    } // Identifiable
+    public var id = UUID() // Identifiable
 
     public let brand: String // Edd enum with AT
     public let model: String // Add dependency from enum
