@@ -29,11 +29,11 @@
 		3E7A6F34289A835500F7C80C /* NetworkManagerInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F33289A835500F7C80C /* NetworkManagerInterface */; };
 		3E7A6F36289A835B00F7C80C /* ProfileService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F35289A835B00F7C80C /* ProfileService */; };
 		3E7A6F3A289A836B00F7C80C /* UserAutosService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F39289A836B00F7C80C /* UserAutosService */; };
-		3E7A6F3C289A837900F7C80C /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3B289A837900F7C80C /* MainModule */; };
 		3E7A6F3E289A837D00F7C80C /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3D289A837D00F7C80C /* ProfileModule */; };
 		3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3F289A838000F7C80C /* EditAutoModule */; };
 		3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9228995AD30080597A /* AppViewFactory.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
+		3E98219A29551625003F1D03 /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E98219929551625003F1D03 /* MainModule */; };
 		3EC5386B287B51560037DA15 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5386A287B51560037DA15 /* AppAssembler.swift */; };
 		3EE81CB8289A889A00FF9F8F /* ProfileServiceInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 3EE81CB7289A889A00FF9F8F /* ProfileServiceInterface */; };
 		3EEBC1162944D7AF00640D35 /* VehiclesService in Frameworks */ = {isa = PBXBuildFile; productRef = 3EEBC1152944D7AF00640D35 /* VehiclesService */; };
@@ -69,15 +69,15 @@
 		3E75C2DB2895EAB400BB03C4 /* UserAutosServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAutosServiceMock.swift; sourceTree = "<group>"; };
 		3E75C2E12895F8E800BB03C4 /* EditAutoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAutoViewModelTests.swift; sourceTree = "<group>"; };
 		3E75C2E42895FA1400BB03C4 /* MakesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakesServiceMock.swift; sourceTree = "<group>"; };
-		3E79D146289A74BB00EEE971 /* MainModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MainModule; path = Packages/Modules/MainModule; sourceTree = "<group>"; };
 		3E79D14A289A75A900EEE971 /* EditAutoModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EditAutoModule; path = Packages/Modules/EditAutoModule; sourceTree = "<group>"; };
-		3E84DA99289A763200F75932 /* ProfileModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileModule; path = Packages/Modules/ProfileModule; sourceTree = "<group>"; };
 		3E8EEB9228995AD30080597A /* AppViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewFactory.swift; sourceTree = "<group>"; };
 		3E97432A287AFA9700612625 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		3E977A6F28985CAC0084E398 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = Packages/Common/Models; sourceTree = "<group>"; };
 		3E977A7028985CB70084E398 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIComponents; path = Packages/Common/UIComponents; sourceTree = "<group>"; };
 		3E977A7228985CD90084E398 /* ProfileService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileService; path = Packages/Services/ProfileService; sourceTree = "<group>"; };
 		3E977A7328985CE20084E398 /* UserAutosService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UserAutosService; path = Packages/Services/UserAutosService; sourceTree = "<group>"; };
+		3E98219829551612003F1D03 /* MainModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MainModule; path = Packages/Modules/MainModule; sourceTree = "<group>"; };
+		3E98219C29551644003F1D03 /* ProfileModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileModule; path = Packages/Modules/ProfileModule; sourceTree = "<group>"; };
 		3EC5386A287B51560037DA15 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		3EEBC1142944D4E800640D35 /* VehiclesService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VehiclesService; path = Packages/Services/VehiclesService; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,9 +96,9 @@
 				3E7A6F2C289A834200F7C80C /* Extensions in Frameworks */,
 				3E7A6F36289A835B00F7C80C /* ProfileService in Frameworks */,
 				3EE81CB8289A889A00FF9F8F /* ProfileServiceInterface in Frameworks */,
+				3E98219A29551625003F1D03 /* MainModule in Frameworks */,
 				3E519A1E28FF450E00A61139 /* AuthModule in Frameworks */,
 				3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */,
-				3E7A6F3C289A837900F7C80C /* MainModule in Frameworks */,
 				3E7A6F3E289A837D00F7C80C /* ProfileModule in Frameworks */,
 				3E7A6F32289A835200F7C80C /* NetworkManager in Frameworks */,
 			);
@@ -247,10 +247,10 @@
 		3EF14906289A7E1800CAA439 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3E98219C29551644003F1D03 /* ProfileModule */,
+				3E98219829551612003F1D03 /* MainModule */,
 				3E519A1C28FF444A00A61139 /* AuthModule */,
 				3E79D14A289A75A900EEE971 /* EditAutoModule */,
-				3E79D146289A74BB00EEE971 /* MainModule */,
-				3E84DA99289A763200F75932 /* ProfileModule */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -286,13 +286,13 @@
 				3E7A6F33289A835500F7C80C /* NetworkManagerInterface */,
 				3E7A6F35289A835B00F7C80C /* ProfileService */,
 				3E7A6F39289A836B00F7C80C /* UserAutosService */,
-				3E7A6F3B289A837900F7C80C /* MainModule */,
 				3E7A6F3D289A837D00F7C80C /* ProfileModule */,
 				3E7A6F3F289A838000F7C80C /* EditAutoModule */,
 				3EE81CB7289A889A00FF9F8F /* ProfileServiceInterface */,
 				3E519A1D28FF450E00A61139 /* AuthModule */,
 				3EEBC1152944D7AF00640D35 /* VehiclesService */,
 				3EEBC1172944D7B200640D35 /* VehiclesServiceInterface */,
+				3E98219929551625003F1D03 /* MainModule */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -697,10 +697,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = UserAutosService;
 		};
-		3E7A6F3B289A837900F7C80C /* MainModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MainModule;
-		};
 		3E7A6F3D289A837D00F7C80C /* ProfileModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProfileModule;
@@ -708,6 +704,10 @@
 		3E7A6F3F289A838000F7C80C /* EditAutoModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EditAutoModule;
+		};
+		3E98219929551625003F1D03 /* MainModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MainModule;
 		};
 		3EE81CB7289A889A00FF9F8F /* ProfileServiceInterface */ = {
 			isa = XCSwiftPackageProductDependency;
