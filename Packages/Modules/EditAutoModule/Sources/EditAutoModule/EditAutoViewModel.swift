@@ -12,9 +12,11 @@ import Models
 import UserAutosService
 
 final class EditAutoViewModel: ObservableObject {
-    @Published private(set) var isLoading: Bool = true
+    @Published private(set) var isLoading: Bool = false
     @Published private(set) var error: Error?
     @Published private(set) var brands: [VehicleBrand] = []
+
+    @Published var showYearPicker: Bool = false
 
     @Published var selectedBrand: VehicleBrand?
     @Published var selectedSeries: VehicleSeries?
@@ -22,6 +24,7 @@ final class EditAutoViewModel: ObservableObject {
     @Published var selectedYear: Int?
 
     @Published var vin: String = ""
+    @Published var test: Int = 0
 
     // MARK: - Private properties
 
@@ -37,6 +40,7 @@ final class EditAutoViewModel: ObservableObject {
     ) {
         self.vehiclesService = vehiclesService
         self.userAutosService = userAutosService
+        bind()
         print("\(type(of: self)) init")
     }
 
@@ -47,6 +51,11 @@ final class EditAutoViewModel: ObservableObject {
     // MARK: - Internal methods
 
     func fetchBrands() {
+        guard brands.isEmpty && !isLoading else {
+            return
+        }
+
+        error = nil
         isLoading = true
         vehiclesService.fetchAllBrands()
             .sink { [weak self] completion in
@@ -82,6 +91,33 @@ final class EditAutoViewModel: ObservableObject {
         userAutosService.addNewAuto(auto)
             .sink { _ in
             } receiveValue: { _ in
+            }
+            .store(in: &cancellableSet)
+    }
+
+    // MARK: - Private methods
+
+    private func bind() {
+        $selectedBrand
+            .removeDuplicates()
+            .sink { [weak self] _ in
+                self?.selectedSeries = nil
+            }
+            .store(in: &cancellableSet)
+
+        $selectedSeries
+            .removeDuplicates()
+            .sink { [weak self] _ in
+                self?.selectedGeneration = nil
+            }
+            .store(in: &cancellableSet)
+
+        $selectedGeneration
+            .removeDuplicates()
+            .sink { [weak self] generation in
+                self?.selectedYear = nil
+                self?.selectedYear = generation?.startYear
+                self?.showYearPicker = false
             }
             .store(in: &cancellableSet)
     }
