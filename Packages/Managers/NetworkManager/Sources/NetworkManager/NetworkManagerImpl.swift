@@ -32,6 +32,10 @@ public final class NetworkManagerImpl: NetworkManager {
                 }
             }
             .decode(type: T.Response.self, decoder: JSONDecoder())
+            .mapError { error in
+                debugPrint(error)
+                return error
+            }
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
