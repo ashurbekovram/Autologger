@@ -44,7 +44,8 @@ extension AppViewFactory: AppTabViewFactory {
     }
 
     func createAuthView() -> AnyView {
-        return AnyView(AuthView())
+        let inputModel = AuthInputModel(authService: AppAssembler.authService)
+        return AnyView(AuthView(inputModel: inputModel))
     }
 }
 

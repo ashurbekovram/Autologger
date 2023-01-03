@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import AuthService
+import AuthServiceInterface
 import VehiclesService
 import VehiclesServiceInterface
 import NetworkManager
@@ -20,4 +22,5 @@ final class AppAssembler {
     public static var networkManager: NetworkManager = NetworkManagerImpl()
     public static var profileService: ProfileService = ProfileServiceLocal()
     public static var userAutosService: UserAutosService = UserAutosServiceLocal()
+    public static var authService: AuthService = AuthServiceImp(networkManager: networkManager)
 }

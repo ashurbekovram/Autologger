@@ -13,7 +13,8 @@ public protocol HTTPRequest {
     var baseURL: String { get }
     var path: String { get }
     var headers: [String: String] { get }
-    var parameters: [String: String] { get }
+    var queryParams: [String: String] { get }
+    var bodyParams: [String: String] { get }
     var method: HTTPMethod { get }
     var timeout: TimeInterval { get }
 }
@@ -24,6 +25,14 @@ public extension HTTPRequest {
     }
 
     var headers: [String: String] {
+        [:]
+    }
+
+    var queryParams: [String: String] {
+        [:]
+    }
+
+    var bodyParams: [String: String] {
         [:]
     }
 

@@ -10,17 +10,20 @@ import SwiftUI
 public struct AuthView: View {
     @StateObject private var viewModel: AuthViewModel
 
-    public init() {
-        _viewModel = StateObject(wrappedValue: AuthViewModel())
+    public init(inputModel: AuthInputModel) {
+        _viewModel = StateObject(wrappedValue: AuthViewModel(
+            authService: inputModel.authService
+        ))
     }
 
     public var body: some View {
         ScrollView {
             VStack {
-                TextField("Login", text: $viewModel.login)
+                TextField("Username", text: $viewModel.username)
                 TextField("Password", text: $viewModel.password)
                 Button("Login") {
                     print("Login button tapped")
+                    viewModel.login()
                 }
             }
             .padding()
@@ -30,8 +33,8 @@ public struct AuthView: View {
 }
 
 // MARK: - PreviewProvider
-struct AuthView_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthView()
-    }
-}
+//struct AuthView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AuthView()
+//    }
+//}

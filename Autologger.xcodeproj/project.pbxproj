@@ -31,6 +31,8 @@
 		3E7A6F3A289A836B00F7C80C /* UserAutosService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F39289A836B00F7C80C /* UserAutosService */; };
 		3E7A6F3E289A837D00F7C80C /* ProfileModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3D289A837D00F7C80C /* ProfileModule */; };
 		3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7A6F3F289A838000F7C80C /* EditAutoModule */; };
+		3E804C9D2963B614006B4062 /* AuthService in Frameworks */ = {isa = PBXBuildFile; productRef = 3E804C9C2963B614006B4062 /* AuthService */; };
+		3E804C9F2963B618006B4062 /* AuthServiceInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 3E804C9E2963B618006B4062 /* AuthServiceInterface */; };
 		3E8EEB9328995AD30080597A /* AppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEB9228995AD30080597A /* AppViewFactory.swift */; };
 		3E97432B287AFA9700612625 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97432A287AFA9700612625 /* AppTabView.swift */; };
 		3E98219A29551625003F1D03 /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3E98219929551625003F1D03 /* MainModule */; };
@@ -80,6 +82,7 @@
 		3E98219C29551644003F1D03 /* ProfileModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProfileModule; path = Packages/Modules/ProfileModule; sourceTree = "<group>"; };
 		3EC5386A287B51560037DA15 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		3EEBC1142944D4E800640D35 /* VehiclesService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VehiclesService; path = Packages/Services/VehiclesService; sourceTree = "<group>"; };
+		3EF6ABA429632CE20023595A /* AuthService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AuthService; path = Packages/Services/AuthService; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +98,9 @@
 				3E7A6F3A289A836B00F7C80C /* UserAutosService in Frameworks */,
 				3E7A6F2C289A834200F7C80C /* Extensions in Frameworks */,
 				3E7A6F36289A835B00F7C80C /* ProfileService in Frameworks */,
+				3E804C9F2963B618006B4062 /* AuthServiceInterface in Frameworks */,
 				3EE81CB8289A889A00FF9F8F /* ProfileServiceInterface in Frameworks */,
+				3E804C9D2963B614006B4062 /* AuthService in Frameworks */,
 				3E98219A29551625003F1D03 /* MainModule in Frameworks */,
 				3E519A1E28FF450E00A61139 /* AuthModule in Frameworks */,
 				3E7A6F40289A838000F7C80C /* EditAutoModule in Frameworks */,
@@ -237,6 +242,7 @@
 		3EF14905289A7E0100CAA439 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3EF6ABA429632CE20023595A /* AuthService */,
 				3EEBC1142944D4E800640D35 /* VehiclesService */,
 				3E977A7228985CD90084E398 /* ProfileService */,
 				3E977A7328985CE20084E398 /* UserAutosService */,
@@ -293,6 +299,8 @@
 				3EEBC1152944D7AF00640D35 /* VehiclesService */,
 				3EEBC1172944D7B200640D35 /* VehiclesServiceInterface */,
 				3E98219929551625003F1D03 /* MainModule */,
+				3E804C9C2963B614006B4062 /* AuthService */,
+				3E804C9E2963B618006B4062 /* AuthServiceInterface */,
 			);
 			productName = Autologger;
 			productReference = 3E164C6F286F38BD006772F9 /* Autologger.app */;
@@ -704,6 +712,14 @@
 		3E7A6F3F289A838000F7C80C /* EditAutoModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EditAutoModule;
+		};
+		3E804C9C2963B614006B4062 /* AuthService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthService;
+		};
+		3E804C9E2963B618006B4062 /* AuthServiceInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthServiceInterface;
 		};
 		3E98219929551625003F1D03 /* MainModule */ = {
 			isa = XCSwiftPackageProductDependency;

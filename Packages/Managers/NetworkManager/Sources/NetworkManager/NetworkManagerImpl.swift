@@ -9,6 +9,9 @@ import Combine
 import Foundation
 import NetworkManagerInterface
 
+// 415 Unsupported Media Type - Неподдерживаемый тип данных в запросе
+// 400 Bad Request - Невозможно войти с предоставленными учетными данными
+
 public final class NetworkManagerImpl: NetworkManager {
     public init() {}
 
@@ -19,13 +22,13 @@ public final class NetworkManagerImpl: NetworkManager {
 
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { data, response in
+                debugPrint(data.prettyPrintedJSONString ?? URLError.cannotDecodeRawData)
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw URLError(.badServerResponse)
                 }
 
                 switch httpResponse.statusCode {
                 case 200...299:
-                    debugPrint(data.prettyPrintedJSONString ?? URLError.cannotDecodeRawData)
                     return data
                 default:
                     throw URLError(.dataNotAllowed)
@@ -41,18 +44,26 @@ public final class NetworkManagerImpl: NetworkManager {
     }
 
     private func createUrlRequest<T: HTTPRequest>(from request: T) -> URLRequest? {
-        let urlString = request.baseURL + request.path
-
-        var urlComponents = URLComponents(string: urlString)
-        urlComponents?.queryItems = request.parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
-        
-        guard let urlWithParameters = urlComponents?.url else {
+        guard let baseURL = URL(string: request.baseURL) else {
             return nil
         }
-        var urlRequest = URLRequest(url: urlWithParameters)
-        urlRequest.timeoutInterval = request.timeout
+
+        var url = baseURL.appending(path: request.path, directoryHint: .notDirectory)
+
+        if !request.queryParams.isEmpty {
+            let queryItems = request.queryParams.map { URLQueryItem(name: $0.key, value: $0.value) }
+            url.append(queryItems: queryItems)
+        }
+
+        var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
+        urlRequest.timeoutInterval = request.timeout
         urlRequest.allHTTPHeaderFields = request.headers
+
+        if !request.bodyParams.isEmpty {
+            urlRequest.httpBody = try? JSONEncoder().encode(request.bodyParams)
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
 
         return urlRequest
     }

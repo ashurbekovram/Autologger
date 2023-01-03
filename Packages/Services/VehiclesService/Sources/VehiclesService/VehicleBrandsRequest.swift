@@ -15,10 +15,6 @@ struct VehicleBrandsRequest: HTTPRequest {
         "/brands"
     }
 
-    var parameters: [String : String] {
-        [:]
-    }
-
     var method: HTTPMethod {
         .get
     }
