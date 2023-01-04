@@ -14,15 +14,16 @@ final class EditProfileViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var isSuccessUpdating: Bool = false
     @Published private(set) var error: String?
-    @Published var name: String = ""
-    @Published var secondName: String = ""
+    @Published var email: String
+    @Published var username: String
 
     private var profileService: ProfileService
     private var cancellableSet = Set<AnyCancellable>()
 
     init(profileService: ProfileService) {
         self.profileService = profileService
-        setupBindings()
+        self.email = profileService.profile.value?.email ?? ""
+        self.username = profileService.profile.value?.username ?? ""
         print("\(type(of: self)) init")
     }
 
@@ -38,15 +39,19 @@ final class EditProfileViewModel: ObservableObject {
                     return
                 }
 
-                self?.name = profile.name
-                self?.secondName = profile.secondName
+                self?.email = profile.email
+                self?.username = profile.username
             }
             .store(in: &cancellableSet)
     }
 
     func updateProfile() {
+        guard let id = profileService.profile.value?.id else {
+            return
+        }
+
         isLoading = true
-        let profile = Profile(name: name, secondName: secondName, imageURL: nil)
+        let profile = Profile(id: id, email: email, username: username, imageURL: nil)
         profileService.updateProfile(profile)
             .sink { [weak self] completion in
                 self?.isLoading = false

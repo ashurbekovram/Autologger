@@ -8,17 +8,20 @@
 import SwiftUI
 
 public struct Profile: Codable, Equatable {
-    public let name: String
-    public let secondName: String
+    public let id: Int
+    public let email: String
+    public let username: String
     public let imageURL: URL?
 
     public init(
-        name: String,
-        secondName: String,
+        id: Int,
+        email: String,
+        username: String,
         imageURL: URL?
     ) {
-        self.name = name
-        self.secondName = secondName
+        self.id = id
+        self.email = email
+        self.username = username
         self.imageURL = imageURL
     }
 }

@@ -25,8 +25,8 @@ public final class AuthServiceImp: AuthService {
 
         return networkManager
             .send(request: request)
-            .map { response in
-                print("TOKEN = " + response.authToken)
+            .map { [weak self] response in
+                self?.networkManager.setApiToken(response.authToken)
                 return ()
             }
             .eraseToAnyPublisher()

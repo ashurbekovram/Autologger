@@ -20,9 +20,9 @@ public struct EditProfileView: View {
     public var body: some View {
         Form {
             Section {
-                TextField("Enter name", text: $viewModel.name)
+                TextField("Enter email", text: $viewModel.email)
                     .disabled(viewModel.isLoading)
-                TextField("Enter second name", text: $viewModel.secondName)
+                TextField("Enter username", text: $viewModel.username)
                     .disabled(viewModel.isLoading)
             }
             Section {

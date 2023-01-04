@@ -42,8 +42,8 @@ public struct MainView: View {
                     Spacer(minLength: 8)
                 } else if let profile = viewModel.profile {
                     ProfileInfoSmallView(
-                        name: profile.name,
-                        secondName: profile.secondName,
+                        email: profile.email,
+                        username: profile.username,
                         imageURL: profile.imageURL,
                         mode: .small
                     )
@@ -88,8 +88,8 @@ public struct MainView: View {
 
     private var profilePlaceholder: some View {
         ProfileInfoSmallView(
-            name: "placeholder name",
-            secondName: "placeholder second name",
+            email: "placeholder email",
+            username: "placeholder username",
             imageURL: nil,
             mode: .small
         )

@@ -13,8 +13,8 @@ public enum ProfileInfoSmallViewMode {
 }
 
 public struct ProfileInfoSmallView: View {
-    private let name: String
-    private let secondName: String
+    private let email: String
+    private let username: String
     private let imageURL: URL?
     private let mode: ProfileInfoSmallViewMode
 
@@ -28,13 +28,13 @@ public struct ProfileInfoSmallView: View {
     }
 
     public init(
-        name: String,
-        secondName: String,
+        email: String,
+        username: String,
         imageURL: URL?,
         mode: ProfileInfoSmallViewMode
     ) {
-        self.name = name
-        self.secondName = secondName
+        self.email = email
+        self.username = username
         self.imageURL = imageURL
         self.mode = mode
     }
@@ -55,8 +55,8 @@ public struct ProfileInfoSmallView: View {
             .frame(width: imageSize, height: imageSize)
             .cornerRadius(4)
             VStack(alignment: .leading, spacing: 4) {
-                Text(name)
-                Text(secondName)
+                Text(email)
+                Text(username)
             }
             Spacer()
         }

@@ -34,8 +34,8 @@ public struct ProfileView: View  {
                             Text("My information")
                                 .font(.system(size: 22, weight: .semibold, design: .default))
                             ProfileInfoSmallView(
-                                name: profile.name,
-                                secondName: profile.secondName,
+                                email: profile.email,
+                                username: profile.username,
                                 imageURL: profile.imageURL,
                                 mode: .large
                             )
