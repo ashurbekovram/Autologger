@@ -13,20 +13,21 @@ import NetworkManagerInterface
 // 400 Bad Request - Невозможно войти с предоставленными учетными данными
 
 public final class NetworkManagerImpl: NetworkManager {
-    private var apiToken: String?
+    public private(set) var apiToken: CurrentValueSubject<String?, Never>
 
     public init() {
-        apiToken = KeyChain.readItem(account: "api-token", service: "autologger-network")
+        let token: String? = KeyChain.readItem(account: "api-token", service: "autologger-network")
+        apiToken = CurrentValueSubject<String?, Never>(token)
     }
 
     public func setApiToken(_ token: String) {
         KeyChain.saveItem(token, account: "api-token", service: "autologger-network")
-        apiToken = token
+        apiToken.send(token)
     }
 
     public func deleteApiToken() {
         KeyChain.delete(account: "api-token", service: "autologger-network")
-        apiToken = nil
+        apiToken.send(nil)
     }
 
     public func send<T: HTTPRequest>(request: T) -> AnyPublisher<T.Response, Error> {
@@ -77,7 +78,7 @@ public final class NetworkManagerImpl: NetworkManager {
         urlRequest.timeoutInterval = request.timeout
         urlRequest.allHTTPHeaderFields = request.headers
 
-        if let apiToken {
+        if let apiToken = apiToken.value {
             urlRequest.setValue("Token \(apiToken)", forHTTPHeaderField: "Authorization")
         }
 

@@ -13,7 +13,7 @@ struct AppTabView: View {
 
     init(inputModel: AppTabInputModel) {
         _viewModel = StateObject(wrappedValue: AppTabViewModel(
-            profileService: inputModel.profileService,
+            authService: inputModel.authService,
             appTabFactory: inputModel.viewFactory
         ))
     }
@@ -29,7 +29,7 @@ struct AppTabView: View {
                 Text("Main")
             }
             NavigationView {
-                if viewModel.profile != nil {
+                if viewModel.isAuthorized {
                     viewModel.appTabFactory.createProfileView()
                 } else {
                     viewModel.appTabFactory.createAuthView()
@@ -49,7 +49,7 @@ struct AppTabView_Previews: PreviewProvider {
     static var previews: some View {
         AppTabView(inputModel: AppTabInputModel(
             viewFactory: AppViewFactory.shared,
-            profileService: AppAssembler.profileService
+            authService: AppAssembler.authService
         ))
     }
 }
