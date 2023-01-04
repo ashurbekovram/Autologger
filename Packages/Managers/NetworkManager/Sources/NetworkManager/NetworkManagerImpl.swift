@@ -13,7 +13,21 @@ import NetworkManagerInterface
 // 400 Bad Request - Невозможно войти с предоставленными учетными данными
 
 public final class NetworkManagerImpl: NetworkManager {
-    public init() {}
+    private var apiToken: String?
+
+    public init() {
+        apiToken = KeyChain.readItem(account: "api-token", service: "autologger-network")
+    }
+
+    public func setApiToken(_ token: String) {
+        KeyChain.saveItem(token, account: "api-token", service: "autologger-network")
+        apiToken = token
+    }
+
+    public func deleteApiToken() {
+        KeyChain.delete(account: "api-token", service: "autologger-network")
+        apiToken = nil
+    }
 
     public func send<T: HTTPRequest>(request: T) -> AnyPublisher<T.Response, Error> {
         guard let urlRequest = createUrlRequest(from: request) else {
@@ -21,7 +35,7 @@ public final class NetworkManagerImpl: NetworkManager {
         }
 
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
-            .tryMap { data, response in
+            .tryMap { [weak self] data, response in
                 debugPrint(data.prettyPrintedJSONString ?? URLError.cannotDecodeRawData)
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw URLError(.badServerResponse)
@@ -30,6 +44,9 @@ public final class NetworkManagerImpl: NetworkManager {
                 switch httpResponse.statusCode {
                 case 200...299:
                     return data
+                case 401:
+                    self?.deleteApiToken()
+                    throw URLError(.userAuthenticationRequired)
                 default:
                     throw URLError(.dataNotAllowed)
                 }
@@ -59,6 +76,10 @@ public final class NetworkManagerImpl: NetworkManager {
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.timeoutInterval = request.timeout
         urlRequest.allHTTPHeaderFields = request.headers
+
+        if let apiToken {
+            urlRequest.setValue("Token \(apiToken)", forHTTPHeaderField: "Authorization")
+        }
 
         if !request.bodyParams.isEmpty {
             urlRequest.httpBody = try? JSONEncoder().encode(request.bodyParams)
