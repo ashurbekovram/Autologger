@@ -15,9 +15,11 @@ public final class ProfileServiceImp: ProfileService {
     public var profile: CurrentValueSubject<Profile?, Never> = .init(nil)
 
     private let networkManager: NetworkManager
+    private var cancellableSet = Set<AnyCancellable>()
 
     public init(networkManager: NetworkManager) {
         self.networkManager = networkManager
+        bind()
     }
 
     public func fetchProfile() -> AnyPublisher<Void, Error> {
@@ -25,7 +27,9 @@ public final class ProfileServiceImp: ProfileService {
 
         return networkManager
             .send(request: request)
-            .map { _ in
+            .receive(on: DispatchQueue.main)
+            .map { [weak self] response in
+                self?.profile.send(response)
                 return ()
             }
             .eraseToAnyPublisher()
@@ -33,5 +37,16 @@ public final class ProfileServiceImp: ProfileService {
 
     public func updateProfile(_ profile: Profile) -> AnyPublisher<Void, Error> {
         return Fail(error: URLError(.cancelled)).eraseToAnyPublisher()
+    }
+
+    private func bind() {
+        networkManager.apiToken
+            .removeDuplicates()
+            .filter { $0 == nil }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.profile.send(nil)
+            }
+            .store(in: &cancellableSet)
     }
 }
