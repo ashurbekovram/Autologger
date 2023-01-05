@@ -12,7 +12,7 @@ struct AuthLoginRequest: HTTPRequest {
     typealias Response = AuthLoginResponse
 
     var path: String {
-        "/auth/token/login"
+        "/auth/token/login/"
     }
 
     var method: HTTPMethod {

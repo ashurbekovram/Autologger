@@ -46,7 +46,7 @@ public final class NetworkManagerImpl: NetworkManager {
                 switch httpResponse.statusCode {
                 case 200...299:
                     return data
-                case 401:
+                case 400...401:
                     self?.deleteApiToken()
                     throw URLError(.userAuthenticationRequired)
                 default:
@@ -82,7 +82,7 @@ public final class NetworkManagerImpl: NetworkManager {
             urlRequest.setValue("Token \(apiToken)", forHTTPHeaderField: "Authorization")
         }
 
-        if !request.bodyParams.isEmpty {
+        if !request.bodyParams.isEmpty && request.method != .get {
             urlRequest.httpBody = try? JSONEncoder().encode(request.bodyParams)
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         }
@@ -96,14 +96,21 @@ public final class NetworkManagerImpl: NetworkManager {
         data: Data
     ) {
         #if DEBUG
+        let headersData = try? JSONEncoder().encode(urlRequest.allHTTPHeaderFields ?? [:])
+
+        var body: String = "none"
+        if let httpBody = urlRequest.httpBody {
+            body = (httpBody.prettyPrintedJSONString ?? "body is not json") as String
+        }
+
         print(
             "==============================",
             "URL: \(urlRequest.url?.absoluteString ?? "none")",
             "METHOD: \(urlRequest.httpMethod ?? "none")",
-            "HEADERS: \(urlRequest.allHTTPHeaderFields ?? [:])",
+            "HEADERS: \(headersData?.prettyPrintedJSONString ?? "none")",
+            "BODY: \(body)",
             "STATUS CODE: \(httpResponse.statusCode)",
-            "RESPONSE:",
-            data.prettyPrintedJSONString ?? "Data is not allowed",
+            "RESPONSE: \(data.prettyPrintedJSONString ?? "response is not json")",
             "==============================",
             separator: "\n"
         )

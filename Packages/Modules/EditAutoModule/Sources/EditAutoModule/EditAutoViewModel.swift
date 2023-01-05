@@ -58,6 +58,7 @@ final class EditAutoViewModel: ObservableObject {
         error = nil
         isLoading = true
         vehiclesService.fetchAllBrands()
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false
                 switch completion {
