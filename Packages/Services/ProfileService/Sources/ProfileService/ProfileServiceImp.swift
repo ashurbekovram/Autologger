@@ -12,12 +12,13 @@ import NetworkManagerInterface
 import ProfileServiceInterface
 
 public final class ProfileServiceImp: ProfileService {
-    public var profile: CurrentValueSubject<Profile?, Never> = .init(nil)
+    public private(set) var profile: CurrentValueSubject<Profile?, Never>
 
     private let networkManager: NetworkManager
     private var cancellableSet = Set<AnyCancellable>()
 
     public init(networkManager: NetworkManager) {
+        self.profile = CurrentValueSubject<Profile?, Never>(ProfileStorage.load())
         self.networkManager = networkManager
         bind()
     }
@@ -29,6 +30,7 @@ public final class ProfileServiceImp: ProfileService {
             .send(request: request)
             .receive(on: DispatchQueue.main)
             .map { [weak self] response in
+                ProfileStorage.save(response)
                 self?.profile.send(response)
                 return ()
             }
@@ -45,8 +47,35 @@ public final class ProfileServiceImp: ProfileService {
             .filter { $0 == nil }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
+                ProfileStorage.clear()
                 self?.profile.send(nil)
             }
             .store(in: &cancellableSet)
+    }
+}
+
+
+// MARK: - Mock storage
+
+final class ProfileStorage {
+    static private let profileKey = "udKeyProfile"
+
+    static func save(_ profile: Profile) {
+        guard let profileData = try? JSONEncoder().encode(profile) else {
+            return
+        }
+        UserDefaults.standard.set(profileData, forKey: ProfileStorage.profileKey)
+    }
+
+    static func load() -> Profile? {
+        guard let profileData = UserDefaults.standard.data(forKey: ProfileStorage.profileKey) else {
+            return nil
+        }
+        let profile = try? JSONDecoder().decode(Profile.self, from: profileData)
+        return profile
+    }
+
+    static func clear() {
+        UserDefaults.standard.removeObject(forKey: ProfileStorage.profileKey)
     }
 }
