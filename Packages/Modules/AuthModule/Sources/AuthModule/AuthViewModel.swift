@@ -7,31 +7,36 @@
 
 import AuthServiceInterface
 import Combine
+import ProfileServiceInterface
 
 final class AuthViewModel: ObservableObject {
     @Published var username: String = "pythonadmin"
     @Published var password: String = "pythonPass"
 
     private let authService: AuthService
+    private let profileService: ProfileService
 
     private var cancellableSet = Set<AnyCancellable>()
 
-    init(authService: AuthService) {
+    init(
+        authService: AuthService,
+        profileService: ProfileService
+    ) {
         self.authService = authService
+        self.profileService = profileService
     }
 
     func login() {
         authService.login(username: username, password: password)
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-                    print("FAILURE \(error.localizedDescription)")
-                case .finished:
-                    break
-                }
-            } receiveValue: { _ in
-                print("SUCCESS")
+            .sink { _ in } receiveValue: { [weak self] _ in
+                self?.fetchProfile()
             }
+            .store(in: &cancellableSet)
+    }
+
+    private func fetchProfile() {
+        profileService.fetchProfile()
+            .sink { _ in } receiveValue: { _ in }
             .store(in: &cancellableSet)
     }
 }

@@ -14,7 +14,8 @@ public struct ProfileView: View  {
     public init(inputModel: ProfileInputModel) {
         _viewModel = StateObject(wrappedValue: ProfileViewModel(
             viewFactory: inputModel.viewFactory,
-            profileService: inputModel.profileService
+            profileService: inputModel.profileService,
+            authService: inputModel.authService
         ))
     }
 
@@ -55,6 +56,11 @@ public struct ProfileView: View  {
                     viewModel.viewFactory.createEditProfileView()
                 } label: {
                     Text("Edit")
+                }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Logout") {
+                    viewModel.logout()
                 }
             }
         }

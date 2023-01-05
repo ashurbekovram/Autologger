@@ -9,4 +9,5 @@ import Combine
 
 public protocol AuthService {
     func login(username: String, password: String) -> AnyPublisher<Void, Error>
+    func logout() -> AnyPublisher<Void, Error>
 }

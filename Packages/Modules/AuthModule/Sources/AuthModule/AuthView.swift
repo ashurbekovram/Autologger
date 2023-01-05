@@ -12,7 +12,8 @@ public struct AuthView: View {
 
     public init(inputModel: AuthInputModel) {
         _viewModel = StateObject(wrappedValue: AuthViewModel(
-            authService: inputModel.authService
+            authService: inputModel.authService,
+            profileService: inputModel.profileService
         ))
     }
 

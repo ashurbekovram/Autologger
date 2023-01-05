@@ -16,12 +16,14 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "AuthService", path: "../Services/AuthService"),
+        .package(name: "ProfileService", path: "../Services/ProfileService"),
     ],
     targets: [
         .target(
             name: "AuthModule",
             dependencies: [
-                .product(name: "AuthServiceInterface", package: "AuthService")
+                .product(name: "AuthServiceInterface", package: "AuthService"),
+                .product(name: "ProfileServiceInterface", package: "ProfileService"),
             ]
         ),
     ]

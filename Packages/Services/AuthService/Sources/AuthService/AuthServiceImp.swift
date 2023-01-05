@@ -31,4 +31,18 @@ public final class AuthServiceImp: AuthService {
             }
             .eraseToAnyPublisher()
     }
+
+    public func logout() -> AnyPublisher<Void, Error> {
+        let request = AuthLogoutRequest()
+        return networkManager
+            .send(request: request)
+            .handleEvents(receiveCompletion: { [weak self] completion in
+                self?.networkManager.deleteApiToken()
+                return ()
+            })
+            .map { _ in
+                return ()
+            }
+            .eraseToAnyPublisher()
+    }
 }

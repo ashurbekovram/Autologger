@@ -5,6 +5,7 @@
 //  Created by Ramazan Ashurbekov on 10.07.2022.
 //
 
+import AuthServiceInterface
 import Combine
 import Models
 import ProfileServiceInterface
@@ -18,14 +19,17 @@ final class ProfileViewModel: ObservableObject {
     let viewFactory: ProfileViewFactory
 
     private let profileService: ProfileService
+    private let authService: AuthService
     private var cancellableSet = Set<AnyCancellable>()
 
     init(
         viewFactory: ProfileViewFactory,
-        profileService: ProfileService
+        profileService: ProfileService,
+        authService: AuthService
     ) {
         self.viewFactory = viewFactory
         self.profileService = profileService
+        self.authService = authService
         setupBindings()
         print("\(type(of: self)) init")
     }
@@ -35,25 +39,41 @@ final class ProfileViewModel: ObservableObject {
     }
 
     private func setupBindings() {
+        profileService.isProfileLoading
+            .removeDuplicates()
+            .assign(to: &$isLoading)
+
         profileService.profile
             .removeDuplicates()
             .assign(to: &$profile)
     }
 
     func onAppear() {
-        if self.profile != nil {
-            isLoading = false
-        } else {
-            fetchProfile()
+        guard profile == nil else {
+            return
         }
+        fetchProfile()
     }
 
     func fetchProfile() {
-        isLoading = true
         profileService.fetchProfile()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
-                self?.isLoading = false
+                switch completion {
+                case .failure(let error):
+                    self?.error = error
+                case .finished:
+                    break
+                }
+            } receiveValue: { _ in }
+            .store(in: &cancellableSet)
+    }
+
+    func logout() {
+        authService
+            .logout()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
                 switch completion {
                 case .failure(let error):
                     self?.error = error

@@ -5,18 +5,21 @@
 //  Created by Ramazan Ashurbekov on 03.08.2022.
 //
 
+import AuthServiceInterface
 import ProfileServiceInterface
-import SwiftUI
 
 public struct ProfileInputModel {
     let viewFactory: ProfileViewFactory
     let profileService: ProfileService
+    let authService: AuthService
 
     public init(
         viewFactory: ProfileViewFactory,
-        profileService: ProfileService
+        profileService: ProfileService,
+        authService: AuthService
     ) {
         self.viewFactory = viewFactory
         self.profileService = profileService
+        self.authService = authService
     }
 }

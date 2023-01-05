@@ -38,13 +38,17 @@ extension AppViewFactory: AppTabViewFactory {
     func createProfileView() -> AnyView {
         let inputModel = ProfileInputModel(
             viewFactory: self,
-            profileService: AppAssembler.profileService
+            profileService: AppAssembler.profileService,
+            authService: AppAssembler.authService
         )
         return AnyView(ProfileView(inputModel: inputModel))
     }
 
     func createAuthView() -> AnyView {
-        let inputModel = AuthInputModel(authService: AppAssembler.authService)
+        let inputModel = AuthInputModel(
+            authService: AppAssembler.authService,
+            profileService: AppAssembler.profileService
+        )
         return AnyView(AuthView(inputModel: inputModel))
     }
 }

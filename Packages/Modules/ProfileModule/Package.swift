@@ -15,6 +15,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(name: "AuthService", path: "../Services/AuthService"),
         .package(name: "Models", path: "../Common/Models"),
         .package(name: "ProfileService", path: "../Services/ProfileService"),
         .package(name: "UIComponents", path: "../Common/UIComponents"),
@@ -23,6 +24,7 @@ let package = Package(
         .target(
             name: "ProfileModule",
             dependencies: [
+                .product(name: "AuthServiceInterface", package: "AuthService"),
                 .product(name: "Models", package: "Models"),
                 .product(name: "ProfileServiceInterface", package: "ProfileService"),
                 .product(name: "UIComponents", package: "UIComponents"),
