@@ -53,7 +53,9 @@ public final class ProfileServiceImp: ProfileService {
     }
 
     public func updateProfile(_ profile: Profile) -> AnyPublisher<Void, Error> {
-        return Fail(error: URLError(.cancelled)).eraseToAnyPublisher()
+        return Fail(error: URLError(.cancelled))
+            .delay(for: 2, scheduler: DispatchQueue.global())
+            .eraseToAnyPublisher()
     }
 
     private func bind() {

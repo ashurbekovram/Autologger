@@ -53,6 +53,7 @@ final class EditProfileViewModel: ObservableObject {
         isLoading = true
         let profile = Profile(id: id, email: email, username: username, imageURL: nil)
         profileService.updateProfile(profile)
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false
                 switch completion {
