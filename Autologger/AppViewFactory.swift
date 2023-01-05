@@ -18,7 +18,8 @@ final class AppViewFactory {
 
     func createTabView() -> AnyView {
         let inputModel = AppTabInputModel(
-            viewFactory: self
+            viewFactory: self,
+            profileService: AppAssembler.profileService
         )
         return AnyView(AppTabView(inputModel: inputModel))
     }

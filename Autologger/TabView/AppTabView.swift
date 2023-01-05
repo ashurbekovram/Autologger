@@ -13,7 +13,8 @@ struct AppTabView: View {
 
     init(inputModel: AppTabInputModel) {
         _viewModel = StateObject(wrappedValue: AppTabViewModel(
-            appTabFactory: inputModel.viewFactory
+            appTabFactory: inputModel.viewFactory,
+            profileService: inputModel.profileService
         ))
     }
 
@@ -28,7 +29,11 @@ struct AppTabView: View {
                 Text("Main")
             }
             NavigationView {
-                viewModel.appTabFactory.createAuthView()
+                if viewModel.isAuthorized {
+                    viewModel.appTabFactory.createProfileView()
+                } else {
+                    viewModel.appTabFactory.createAuthView()
+                }
             }
             .navigationViewStyle(.stack)
             .tabItem {
@@ -43,7 +48,8 @@ struct AppTabView: View {
 struct AppTabView_Previews: PreviewProvider {
     static var previews: some View {
         AppTabView(inputModel: AppTabInputModel(
-            viewFactory: AppViewFactory.shared
+            viewFactory: AppViewFactory.shared,
+            profileService: AppAssembler.profileService
         ))
     }
 }

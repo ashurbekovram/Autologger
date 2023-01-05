@@ -10,9 +10,18 @@ import Models
 import ProfileServiceInterface
 
 final class AppTabViewModel: ObservableObject {
+    let isAuthorized: Bool
+
     let appTabFactory: AppTabViewFactory
 
-    init(appTabFactory: AppTabViewFactory) {
+    private let profileService: ProfileService
+
+    init(
+        appTabFactory: AppTabViewFactory,
+        profileService: ProfileService
+    ) {
         self.appTabFactory = appTabFactory
+        self.profileService = profileService
+        self.isAuthorized = profileService.profile.value != nil
     }
 }
