@@ -20,7 +20,7 @@ import UserAutosService
 final class AppAssembler {
     public static var vehiclesService: VehiclesService = VehiclesServiceImp(networkManager: networkManager)
     public static var networkManager: NetworkManager = NetworkManagerImpl()
-    public static var profileService: ProfileService = ProfileServiceLocal()
+    public static var profileService: ProfileService = ProfileServiceImp(networkManager: networkManager)
     public static var userAutosService: UserAutosService = UserAutosServiceLocal()
     public static var authService: AuthService = AuthServiceImp(networkManager: networkManager)
 }

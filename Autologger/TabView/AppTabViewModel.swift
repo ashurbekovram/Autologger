@@ -7,29 +7,12 @@
 
 import Foundation
 import Models
-import AuthServiceInterface
+import ProfileServiceInterface
 
 final class AppTabViewModel: ObservableObject {
     let appTabFactory: AppTabViewFactory
 
-    private let authService: AuthService
-
-    @Published private(set) var isAuthorized: Bool
-
-    init(
-        authService: AuthService,
-        appTabFactory: AppTabViewFactory
-    ) {
-        self.authService = authService
+    init(appTabFactory: AppTabViewFactory) {
         self.appTabFactory = appTabFactory
-        self.isAuthorized = authService.isAuthorized.value
-        setupBindings()
-    }
-
-    private func setupBindings() {
-        authService.isAuthorized
-            .dropFirst()
-            .removeDuplicates()
-            .assign(to: &$isAuthorized)
     }
 }

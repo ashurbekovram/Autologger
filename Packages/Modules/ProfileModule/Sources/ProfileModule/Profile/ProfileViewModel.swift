@@ -10,12 +10,6 @@ import Models
 import ProfileServiceInterface
 import SwiftUI
 
-struct ProfileState {
-    var isLoading: Bool
-    var profile: Profile?
-    var error: Error?
-}
-
 final class ProfileViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = true
     @Published private(set) var profile: Profile?
@@ -57,6 +51,7 @@ final class ProfileViewModel: ObservableObject {
     func fetchProfile() {
         isLoading = true
         profileService.fetchProfile()
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false
                 switch completion {

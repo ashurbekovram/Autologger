@@ -8,7 +8,5 @@
 import Combine
 
 public protocol AuthService {
-    var isAuthorized: CurrentValueSubject<Bool, Never> { get }
-
     func login(username: String, password: String) -> AnyPublisher<Void, Error>
 }

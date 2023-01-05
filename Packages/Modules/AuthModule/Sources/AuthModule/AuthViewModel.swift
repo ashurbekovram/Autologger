@@ -9,8 +9,8 @@ import AuthServiceInterface
 import Combine
 
 final class AuthViewModel: ObservableObject {
-    @Published var username: String = ""
-    @Published var password: String = ""
+    @Published var username: String = "pythonadmin"
+    @Published var password: String = "pythonPass"
 
     private let authService: AuthService
 

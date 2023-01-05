@@ -68,6 +68,7 @@ final class MainViewModel: ObservableObject {
 
         return profileService
             .fetchProfile()
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 withAnimation {
                     self?.isProfileLoading = false
@@ -87,6 +88,7 @@ final class MainViewModel: ObservableObject {
 
         return userAutosService
             .fetchUserAutos()
+            .receive(on: DispatchQueue.main)
             .weakSink(on: self) { strongSelf, completion in
                 strongSelf.isAutosLoading = false
                 switch completion {

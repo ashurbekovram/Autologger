@@ -9,5 +9,4 @@ import AuthServiceInterface
 
 struct AppTabInputModel {
     let viewFactory: AppTabViewFactory
-    let authService: AuthService
 }

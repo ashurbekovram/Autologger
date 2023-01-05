@@ -12,7 +12,7 @@ struct ProfileMeRequest: HTTPRequest {
     typealias Response = Profile
 
     var path: String {
-        "/auth/users/me"
+        "/auth/users/me/"
     }
 
     var method: HTTPMethod {

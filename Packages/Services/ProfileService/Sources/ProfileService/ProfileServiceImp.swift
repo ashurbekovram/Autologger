@@ -11,7 +11,7 @@ import Models
 import NetworkManagerInterface
 import ProfileServiceInterface
 
-final class ProfileServiceImp: ProfileService {
+public final class ProfileServiceImp: ProfileService {
     public var profile: CurrentValueSubject<Profile?, Never> = .init(nil)
 
     private let networkManager: NetworkManager
@@ -20,7 +20,7 @@ final class ProfileServiceImp: ProfileService {
         self.networkManager = networkManager
     }
 
-    func fetchProfile() -> AnyPublisher<Void, Error> {
+    public func fetchProfile() -> AnyPublisher<Void, Error> {
         let request = ProfileMeRequest()
 
         return networkManager
@@ -31,7 +31,7 @@ final class ProfileServiceImp: ProfileService {
             .eraseToAnyPublisher()
     }
 
-    func updateProfile(_ profile: Profile) -> AnyPublisher<Void, Error> {
+    public func updateProfile(_ profile: Profile) -> AnyPublisher<Void, Error> {
         return Fail(error: URLError(.cancelled)).eraseToAnyPublisher()
     }
 }

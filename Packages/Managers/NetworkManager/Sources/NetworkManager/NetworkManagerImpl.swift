@@ -37,10 +37,11 @@ public final class NetworkManagerImpl: NetworkManager {
 
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { [weak self] data, response in
-                debugPrint(data.prettyPrintedJSONString ?? URLError.cannotDecodeRawData)
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw URLError(.badServerResponse)
                 }
+
+                self?.debugLog(urlRequest: urlRequest, httpResponse: httpResponse, data: data)
 
                 switch httpResponse.statusCode {
                 case 200...299:
@@ -57,7 +58,6 @@ public final class NetworkManagerImpl: NetworkManager {
                 debugPrint(error)
                 return error
             }
-            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
 
@@ -88,6 +88,26 @@ public final class NetworkManagerImpl: NetworkManager {
         }
 
         return urlRequest
+    }
+
+    private func debugLog(
+        urlRequest: URLRequest,
+        httpResponse: HTTPURLResponse,
+        data: Data
+    ) {
+        #if DEBUG
+        print(
+            "==============================",
+            "URL: \(urlRequest.url?.absoluteString ?? "none")",
+            "METHOD: \(urlRequest.httpMethod ?? "none")",
+            "HEADERS: \(urlRequest.allHTTPHeaderFields ?? [:])",
+            "STATUS CODE: \(httpResponse.statusCode)",
+            "RESPONSE:",
+            data.prettyPrintedJSONString ?? "Data is not allowed",
+            "==============================",
+            separator: "\n"
+        )
+        #endif
     }
 }
 
