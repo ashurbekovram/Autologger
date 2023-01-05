@@ -54,32 +54,29 @@ final class MainViewModel: ObservableObject {
     }
 
     private func setupBindings() {
+        profileService.isProfileLoading
+            .receive(on: DispatchQueue.main)
+            .removeDuplicates()
+            .assign(to: &$isProfileLoading)
+
         profileService.profile
             .removeDuplicates()
+            .receive(on: DispatchQueue.main)
             .assign(to: &$profile)
 
         userAutosService.userAutos
             .removeDuplicates()
+            .receive(on: DispatchQueue.main)
             .assign(to: &$autos)
     }
 
     private func loadProfile() {
-        isProfileLoading = true
-
-        return profileService
+        profileService
             .fetchProfile()
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
-                withAnimation {
-                    self?.isProfileLoading = false
-                }
-                switch completion {
-                case .failure(let error):
-                    self?.errorMessage = error.localizedDescription
-                case .finished:
-                    break
-                }
-            } receiveValue: { _ in }
+            .sink(
+                receiveCompletion: { _ in },
+                receiveValue: { _ in }
+            )
             .store(in: &cancellableSet)
     }
 

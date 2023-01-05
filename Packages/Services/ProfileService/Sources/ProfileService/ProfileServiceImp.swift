@@ -13,6 +13,7 @@ import ProfileServiceInterface
 
 public final class ProfileServiceImp: ProfileService {
     public private(set) var profile: CurrentValueSubject<Profile?, Never>
+    public private(set) var isProfileLoading = CurrentValueSubject<Bool, Never>(false)
 
     private let networkManager: NetworkManager
     private var cancellableSet = Set<AnyCancellable>()
@@ -23,18 +24,32 @@ public final class ProfileServiceImp: ProfileService {
         bind()
     }
 
-    public func fetchProfile() -> AnyPublisher<Void, Error> {
-        let request = ProfileMeRequest()
+    private var profileFetchingPublisher: AnyPublisher<Void, Error>?
 
-        return networkManager
+    public func fetchProfile() -> AnyPublisher<Void, Error> {
+        guard !isProfileLoading.value else {
+            return profileFetchingPublisher ?? Fail(error: URLError(.cancelled)).eraseToAnyPublisher()
+        }
+
+        isProfileLoading.send(true)
+
+        let request = ProfileMeRequest()
+        let pp = networkManager
             .send(request: request)
             .receive(on: DispatchQueue.main)
+            .handleEvents(receiveCompletion: { [weak self] completion in
+                self?.isProfileLoading.send(false)
+                return ()
+            })
             .map { [weak self] response in
                 ProfileStorage.save(response)
                 self?.profile.send(response)
                 return ()
             }
             .eraseToAnyPublisher()
+
+        profileFetchingPublisher = pp
+        return pp
     }
 
     public func updateProfile(_ profile: Profile) -> AnyPublisher<Void, Error> {
